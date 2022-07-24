@@ -1,0 +1,52 @@
+$green: #27300f;
+$orange: #d26a22;
+$white: #fff;
+
+$font-cormorant: 'Cormorant', sans-serif;
+$font-jost: 'Jost', sans-serif;
+
+$r_mob_320: 320px;
+$r_mob_360: 360px;
+$r_mob_400: 400px;
+$r_mob_500: 500px;
+$r_mob_600: 600px;
+$r_tab: 768px;
+$r_tab_900: 900px;
+$r_desk: 1000px;
+$r_desk_1120: 1120px;
+$r_desk_hd: 1200px;
+$r_desk_1280: 1280px;
+$r_desk_1350: 1350px;
+$r_desk_full_1750: 1750px;
+
+html {
+	font-size: 10px;
+	@media(max-width: $r_mob_500) {
+		font-size: 8px;
+	}
+}
+
+body {
+	color: $green;
+	font-size: 1.6rem;
+	font-family: $font-jost;
+	font-size: 1.8rem;
+}
+
+.container {
+	max-width: 1140px;
+	margin: 0px auto;
+	padding: 0px 15px;
+	box-sizing: content-box;
+	@media(max-width: $r_tab) {
+		max-width: 600px;
+		padding: 0px 5px;
+	}
+}
+
+h1 {
+	color: $orange;
+	font-size: 40px;
+	margin: 0 auto;
+}
+
