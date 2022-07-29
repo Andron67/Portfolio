@@ -1,0 +1,41 @@
+$red: #D40000;
+$grey: #F3F2F0;
+$white: #fff;
+$black: #010101;
+
+$font-inter: 'Inter', sans-serif;
+
+$r_mob_320: 320px;
+$r_mob_360: 360px;
+$r_mob_400: 400px;
+$r_mob_500: 500px;
+$r_mob_600: 600px;
+$r_tab: 768px;
+$r_tab_900: 900px;
+$r_desk: 1000px;
+$r_desk_1120: 1120px;
+$r_desk_hd: 1200px;
+$r_desk_1280: 1280px;
+$r_desk_1350: 1350px;
+$r_desk_full_1750: 1750px;
+
+html {
+	font-size: 10px;
+	@media(max-width: $r_mob_500) {
+		font-size: 8px;
+	}
+}
+
+body {
+	background-color: $grey;
+	font-size: 1.4rem;
+	font-family: $font-inter;
+	font-weight: 400;
+}
+
+&_link {
+	color: $black;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 1.5;
+}

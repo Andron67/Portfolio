@@ -1,9 +1,11 @@
-$green: #27300f;
-$orange: #d26a22;
-$white: #fff;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-$font-cormorant: 'Cormorant', sans-serif;
-$font-jost: 'Jost', sans-serif;
+$red: #D40000;
+$grey: #F3F2F0;
+$white: #fff;
+$black: #010101;
+
+$font-inter: 'Inter', sans-serif;
 
 $r_mob_320: 320px;
 $r_mob_360: 360px;
@@ -27,26 +29,236 @@ html {
 }
 
 body {
-	color: $green;
-	font-size: 1.6rem;
-	font-family: $font-jost;
-	font-size: 1.8rem;
+	background-color: $grey;
+	font-size: 1.4rem;
+	font-family: $font-inter;
+	font-weight: 400;
 }
 
-.container {
+.__container {
 	max-width: 1140px;
 	margin: 0px auto;
 	padding: 0px 15px;
 	box-sizing: content-box;
-	@media(max-width: $r_tab) {
-		max-width: 600px;
+	@media(max-width: $r_tab_900) {
 		padding: 0px 5px;
 	}
 }
 
-h1 {
-	color: $orange;
-	font-size: 40px;
-	margin: 0 auto;
+.header {
+	padding: 40px 0px 60px 0px;
+	@media(max-width: $r_mob_500) {
+		padding: 20px 0px 40px 0px;
+	}
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__menu {
+		@media(max-width: $r_tab) {
+			display: none;
+		}
+	}
+
+	&__list {
+		display: flex;
+		gap: 30px;
+		padding-left: 0px;
+		@media(max-width: $r_tab_900) {
+			gap: 10px;
+		}
+	}
+
+	&__item {
+		padding: 0px;
+		list-style: none;
+	}
+
+	&__link {
+		color: $black;
+		line-height: 1.5;
+		text-decoration: none;
+		transition: .9s;
+		&:hover {
+			color: $red;
+		}
+	}
+
+	&__mob {
+		max-width: 768px;
+		width: 100%;
+		display: none;
+		&-wrapper {
+			display: flex;
+			justify-content: space-between;
+		}
+		@media(max-width: $r_tab) {
+			display: block;
+		}
+	}
 }
+
+.connect {
+	display: flex;
+	&_tel {
+		display: block;
+		padding: 5px 13px;
+	}
+
+	&_mail {
+		border-left: 1px solid rgba($black, .2);
+		display: block;
+		padding: 5px 0px 5px 13px;
+	}
+
+	@media(max-width: $r_tab) {
+		display: none;
+	}
+}
+
+.burger {
+	width: 26px;
+	height: 20px;
+	background: url('../icons/burger.svg') 0 0 no-repeat;
+	background-color: transparent;
+	background-size: contain;
+	border: none;
+	cursor: pointer;
+}
+
+.burger-close {
+	width: 22px;
+	height: 22px;
+	background: url('../icons/close.svg') 0 0 no-repeat;
+	background-color: transparent;
+	border: none;
+	background-size: contain;
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	cursor: pointer;
+}
+
+.modal {
+	background-color: $grey;
+	max-width: 360px;
+	width: 100%;
+	padding: 0px 10px;
+	position: absolute;
+	top: -810px;
+	right: 5px;
+	box-sizing: border-box;
+	transition: .3s;
+	&__header {
+		height: 80px;
+		border-bottom: 1px solid $black;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 0px;
+	}
+
+	&__item {
+		border-bottom: 1px solid $black;
+		display: block;
+		max-width: 360px;
+		width: 100%;
+		list-style: none;
+		padding: 20px 0px;
+		text-align: center;
+		width: 100%;
+	}
+
+	&__link {
+		color: $black;
+		text-decoration: none;
+		font-size: 2.6rem;
+		line-height: 1.5;
+		transition: .3s;
+		&:hover {
+			color: $red;
+		}
+	}
+
+	&__footer {
+		display: flex;
+		padding: 21px 0px;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 21px;
+	}
+
+	&__about {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		margin: -10px -10px;
+		padding: 0px 10px;
+		background-color: rgba($black, .2);
+	}
+
+	&__description {
+		max-width: 141px;
+	}
+
+	&__title {
+		color: $black;
+		font-size: 1.2rem;
+		font-weight: 700;
+		line-height: 1.5;
+	}
+
+	&__text {
+		color: $black;
+		font-size: 1rem;
+		line-height: 1.75;
+	}
+}
+
+.social {
+	display: flex;
+	width: 270px;
+	justify-content: space-between;
+	&>*:not(:last-child) {
+		border-right: 1px solid rgba($black, .2);
+		padding-right: 14px;
+	}
+	&_link {
+		display: block;
+		padding-top: 4px;
+		padding-bottom: 4px;
+		flex-basis: 57px;
+		color: $black;
+		text-decoration: none;
+		font-size: 16px;
+		line-height: 1.5;
+		transition: .3s;
+		&:hover {
+			color: $red;
+		}
+	}
+}
+
+.decription {
+	max-width: 197px;
+	&-title {
+		color: $black;
+		font-size: 1.6rem;
+		font-weight: 700;
+		line-height: 1.5;
+	}
+}
+
+.text {
+	color: $black;
+		font-size: 1.4rem;
+		line-height: 1.5;
+}
+	
 
