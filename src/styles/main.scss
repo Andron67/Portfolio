@@ -147,7 +147,7 @@ body {
 	width: 100%;
 	padding: 0px 10px;
 	position: absolute;
-	top: -810px;
+	top: -840px;
 	right: 5px;
 	box-sizing: border-box;
 	transition: .3s;
@@ -195,7 +195,7 @@ body {
 		gap: 21px;
 	}
 
-	&__about {
+	&__skill {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		margin: -10px -10px;
@@ -245,12 +245,18 @@ body {
 	}
 }
 
-.decription {
+.description {
 	max-width: 197px;
 	&-title {
 		color: $black;
 		font-size: 1.6rem;
 		font-weight: 700;
+		line-height: 1.5;
+	}
+
+	&-text {
+		color: rgba($black, .8);
+		font-size: 1.4rem;
 		line-height: 1.5;
 	}
 }
@@ -259,6 +265,91 @@ body {
 	color: $black;
 		font-size: 1.4rem;
 		line-height: 1.5;
+}
+
+
+.main-block {
+	&__about {
+		padding: 113px 0px;
+	}
+
+	&__name {
+		display: block;
+		color: $black;
+		font-size: 2.8rem;
+		font-weight: 400;
+		line-height: 1.5;
+		margin-bottom: 60px;
+	}
+
+	&__title {
+		color: $black;
+		display: block;
+		text-transform: uppercase;
+		font-size: 7.4rem;
+		font-weight: 700;
+	}
+
+	&__discuss {
+		display: flex;
+		border-bottom: 1px solid $black;
+		padding-bottom: 57px;
+		justify-content: space-between;
+	}
+
+	&__button-block {
+		display: flex;
+		justify-content: flex-start;
+		padding: 0px 0px 15px 0px;
+		position: relative;
+		width: 170px; 
+		&:hover {
+			cursor: pointer;
+		}
+
+		&::after {
+			content: '';
+			width: 170px;
+			width: 0%;
+			height: 1px;
+			position: absolute;
+			background-color: $black;
+			top: 35px;
+			transition: .3s;
+		}
+	
+		&:hover::after{
+			cursor: pointer;
+			width: 100%;
+			background-color: $black;
+		}
+	}
+
+	&__button {
+		background-color: transparent;
+		display: block;
+		padding-left: 0px;
+		border: none;
+		font-size: 1.6rem;
+		font-weight: 700;
+		&:hover {
+			cursor: pointer;
+		}
+		&::after {
+			content: '';
+			background: url('../icons/arrow.svg');
+			width: 15px;
+			height: 10px;
+			position: absolute;
+			top: 5px;
+			right: 0px;
+		}
+	}
+
+	&__skill {
+		display: flex;
+		justify-content: space-between;
+	}
 }
 	
 
