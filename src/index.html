@@ -7,7 +7,7 @@
     <title>Портфолио</title>
 </head>
 	
-<body>
+<body id = "bodyclose">
 	<div class="wrapper">
 		<!-- HEADER -->
 		<header class="header">
@@ -116,7 +116,7 @@
 
 				<div class="main-block__discuss">
 					<div class="main-block__button-block">
-						<button class = "main-block__button ">Обсудить проект</button>
+						<button class = "main-block__button" type = "button" id = "DiscussProjectOpen" onclick = "OpenMessenger()">Обсудить проект</button>
 					</div>
 					   
 					<div class="main-block__social social">
@@ -149,7 +149,7 @@
 	</main>
 
 	<!--ВЫПАДАШКА (Обсудить проект)-->
-	<div class="messenger">
+	<div class="messenger" id = "DiscussProject">
 		<div class="messenger__container">
 			<div class="messenger__header">
 				<h2 class="messenger__title">Расскажите о своем проекте</h2>
@@ -167,7 +167,7 @@
 					<span class="control">Telegram</span> <!-- Fake button -->
 
 					<!-- Items -->
-					<ul class="drop-items">
+					<ul class="drop-items" id = "itemsgrey">
 						<li class="item-drop">
 							<a target="_blank" href="#">WhatsApp </a>
 						</li>
@@ -189,6 +189,7 @@
 				</label>   
 				<!-- END Dropdown -->
 			</form>
+			<button class="messenger__close" onclick = "CloseMessenger()"></button>
 		</div>
 	</div>
 
@@ -205,6 +206,18 @@
     	function closeModal() {
 	 	document.getElementById("modal").style.top="-840px";
    	}
+
+		function OpenMessenger() {
+			document.getElementById('DiscussProject').style.visibility = 'visible';
+			document.getElementById('bodyclose').style.background = '#010101';
+			document.getElementById('DiscussProject').style.background = '#F3F2F0';
+			document.getElementById('itemsgrey').style.background = '#F3F2F0'
+		}
+
+		function CloseMessenger() {
+			document.getElementById('DiscussProject').style.visibility = 'hidden';
+			document.getElementById('bodyclose').style.background = '#F3F2F0'
+		}
 	</script>
 </body>
 </html>

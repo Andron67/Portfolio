@@ -249,8 +249,6 @@ body {
 	}
 }
 
-
-
 .description {
 	max-width: 197px;
 	&-title {
@@ -359,13 +357,29 @@ body {
 }
 	
 // ВЫПАДАШКА на чистом CSS
-//Mixins
 
 .messenger {
 	border: 1px solid #000;
+	position: relative;
+	z-index: 100;
+	top: -800px;
+	right: 0px;
 	max-width: 600px;
    width: 100%;
 	margin: 100px auto 400px;
+	visibility: hidden;
+	&__close {
+		width: 22px;
+		height: 22px;
+		background: url('../icons/close.svg') 0 0 no-repeat;
+		background-color: transparent;
+		border: none;
+		background-size: contain;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+	}
 
 	&__container {
 		max-width: 560px;
