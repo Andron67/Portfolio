@@ -8,7 +8,7 @@
 </head>
 	
 <body>
-	<div class="wrapper" id = "PopapOpen">
+	<div class="wrapper">
 		<!-- HEADER -->
 		<header class="header">
 			<div class="header__container __container">
@@ -116,7 +116,7 @@
 
 				<div class="main-block__discuss">
 					<div class="main-block__button-block">
-						<button class = "main-block__button" type = "button" id = "DiscussProjectOpen" onclick = "OpenMessenger()">Обсудить проект</button>
+						<a href = "#discussproject" class = "main-block__button" onclick = "OpenMessenger()">Обсудить проект</a>
 					</div>
 					   
 					<div class="main-block__social social">
@@ -149,7 +149,7 @@
 	</main>
 
 	<!--ВЫПАДАШКА (Обсудить проект)-->
-	<div class="messenger" id = "DiscussProject">
+	<div class="messenger" id = "discussproject">
 		<div class="messenger__container">
 			<div class="messenger__header">
 				<h2 class="messenger__title">Расскажите о своем проекте</h2>
@@ -208,12 +208,13 @@
    	}
 
 		function OpenMessenger() {
-			document.getElementById('DiscussProject').style.visibility = 'visible';
-	      document.body.style.overflow = 'hidden';
+			document.getElementById('discussproject').style.top = '370px';
+			document.getElementById("discussproject").style.display = 'block';
+			document.body.style.overflow = 'hidden'; 
 		}
 
 		function CloseMessenger() {
-			document.getElementById('DiscussProject').style.visibility = 'hidden';
+			document.getElementById('discussproject').style.top = '-2000px';
 			document.body.style.overflow = '';
 		}
 	</script>

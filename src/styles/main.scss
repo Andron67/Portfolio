@@ -39,6 +39,10 @@ body {
 	font-weight: 400;
 }
 
+.wrapper {
+	overflow: hidden;
+}
+
 .__container {
 	max-width: 1140px;
 	margin: 0px auto;
@@ -330,10 +334,10 @@ body {
 	}
 
 	&__button {
-		background-color: transparent;
+		color: $black;
 		display: block;
 		padding-left: 0px;
-		border: none;
+		text-decoration: none;
 		font-size: 1.6rem;
 		font-weight: 700;
 		&:hover {
@@ -359,15 +363,14 @@ body {
 // ВЫПАДАШКА на чистом CSS
 
 .messenger {
-	border: 1px solid #000;
-	position: relative;
+	background-color: $grey;
+	position: absolute;
 	z-index: 100;
-	top: -800px;
-	right: 0px;
+	top: -2000px;
+	right: 500px;
 	max-width: 600px;
    width: 100%;
 	margin: 100px auto 400px;
-	visibility: hidden;
 	&__close {
 		width: 22px;
 		height: 22px;
@@ -512,11 +515,11 @@ body {
   }
   
   .drop-items {  
-	 width: 560px;  
+	 max-width: 540px;  
     width: 100%;
 	 position: absolute;
-    padding: 0px 0px 0px 40px;
-    margin: 0px -20px 0px -20px;
+    padding: 0px 0px 0px 20px;
+    margin: 0px -20px 0px 0px;
     transition: all .3s ease;    
     background: rgba($black, .05);   
     overflow: hidden;
