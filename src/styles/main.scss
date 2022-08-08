@@ -5,10 +5,6 @@ $grey: #F3F2F0;
 $white: #fff;
 $black: #010101;
 
-//Variables После просмотра удалить
-$color-primary-theme: #30336b;
-$width-sm-min: (768px);
-
 $font-inter: 'Inter', sans-serif;
 
 $r_mob_320: 320px;
@@ -53,6 +49,7 @@ body {
 	}
 }
 
+/* HEADER */
 .header {
 	padding: 40px 0px 60px 0px;
 	@media(max-width: $r_mob_500) {
@@ -155,6 +152,7 @@ body {
 	width: 100%;
 	padding: 0px 10px;
 	position: absolute;
+	z-index: 100;
 	top: -840px;
 	right: 5px;
 	box-sizing: border-box;
@@ -233,20 +231,35 @@ body {
 	display: flex;
 	width: 270px;
 	justify-content: space-between;
+	align-items: center;
 	&>*:not(:last-child) {
 		border-right: 1px solid rgba($black, .2);
 		padding-right: 14px;
+		@media(max-width: $r_tab) {
+			padding-right: 10px;
+		}
 	}
+
+	&:nth-child(2) {
+		@media(max-width: $r_mob_500) {
+			padding: 0px 5px;
+		}
+	}
+
 	&_link {
 		display: block;
-		padding-top: 4px;
-		padding-bottom: 4px;
+		padding: 4px 0px;
 		flex-basis: 57px;
 		color: $black;
+		text-align: center;
 		text-decoration: none;
-		font-size: 16px;
+		font-size: 1.6rem;
 		line-height: 1.5;
 		transition: .3s;
+		@media(max-width: $r_mob_400) {
+			font-size: 1.5rem;
+			text-align: end;
+		}
 		&:hover {
 			color: $red;
 		}
@@ -276,9 +289,22 @@ body {
 }
 
 
+// MAIN 
 .main-block {
 	&__about {
 		padding: 113px 0px;
+		@media(max-width: $r_tab) {
+			padding: 80px 0px;
+		}
+		@media(max-width: $r_mob_400) {
+			padding: 60px 0px;
+		}
+	}
+
+	&__img {
+		max-width: 1140px;
+		width: 100%;
+		height: 100%;
 	}
 
 	&__name {
@@ -288,6 +314,15 @@ body {
 		font-weight: 400;
 		line-height: 1.5;
 		margin-bottom: 60px;
+		@media(max-width: $r_tab) {
+			margin-bottom: 40px;
+		}
+		@media(max-width: $r_mob_400) {
+			margin-bottom: 20px;
+		}
+		@media(max-width: $r_mob_600) {
+			font-size: 1.8rem;
+		}
 	}
 
 	&__title {
@@ -296,6 +331,15 @@ body {
 		text-transform: uppercase;
 		font-size: 7.4rem;
 		font-weight: 700;
+		@media(max-width: $r_tab_900) {
+			font-size: 5.4rem;
+		}
+		@media(max-width: $r_mob_600) {
+			font-size: 4.4rem;
+		}
+		@media(max-width: $r_mob_400) {
+			font-size: 3.5rem;
+		}
 	}
 
 	&__discuss {
@@ -521,7 +565,7 @@ body {
     padding: 0px 0px 0px 20px;
     margin: 0px -20px 0px 0px;
     transition: all .3s ease;    
-    background: rgba($black, .05);   
+    background: rgba($grey, .8);   
     overflow: hidden;
     max-height: 0;
     opacity: 0;
