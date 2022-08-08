@@ -7,8 +7,8 @@
     <title>Портфолио</title>
 </head>
 	
-<body id = "bodyclose">
-	<div class="wrapper">
+<body>
+	<div class="wrapper" id = "PopapOpen">
 		<!-- HEADER -->
 		<header class="header">
 			<div class="header__container __container">
@@ -204,19 +204,17 @@
    	}
 
     	function closeModal() {
-	 	document.getElementById("modal").style.top="-840px";
+	 		document.getElementById("modal").style.top="-840px";
    	}
 
 		function OpenMessenger() {
 			document.getElementById('DiscussProject').style.visibility = 'visible';
-			document.getElementById('bodyclose').style.background = '#010101';
-			document.getElementById('DiscussProject').style.background = '#F3F2F0';
-			document.getElementById('itemsgrey').style.background = '#F3F2F0'
+	      document.body.style.overflow = 'hidden';
 		}
 
 		function CloseMessenger() {
 			document.getElementById('DiscussProject').style.visibility = 'hidden';
-			document.getElementById('bodyclose').style.background = '#F3F2F0'
+			document.body.style.overflow = '';
 		}
 	</script>
 </body>

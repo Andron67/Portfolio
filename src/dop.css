@@ -40,3 +40,28 @@ body {
 	font-weight: 400;
 	line-height: 1.5;
 }
+
+function openPopup() 
+{
+	 document.getElementById("background").style.top = "0px"
+	 document.getElementById("background").style.display= "block"
+	 document.body.style.overflow = 'hidden';
+}
+
+function closePopup() 
+{
+	 document.getElementById("background").style.top = "-2000px";
+	 document.body.style.overflow = '';
+} 
+
+function OpenMessenger() {
+	document.getElementById('DiscussProject').style.visibility = 'visible';
+	document.getElementById('bodyclose').style.background = '';
+	document.getElementById('DiscussProject').style.background = '#F3F2F0';
+	document.getElementById('itemsgrey').style.background = '#F3F2F0'
+}
+
+function CloseMessenger() {
+	document.getElementById('DiscussProject').style.visibility = 'hidden';
+	document.getElementById('bodyclose').style.background = '#F3F2F0'
+}
