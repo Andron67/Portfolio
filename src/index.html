@@ -109,39 +109,51 @@
 				<div class="main-block__cover _ibg">
 					<img src="images/bg.png" alt="Моё фото" class="main-block__img">
 				</div>
-				<div class="main-block__about">
-					<h3 class="main-block__name">Александр Антропов</h3>
-					<h2 class="main-block__title title">web-разработчик</h2>
+				<div class="main-block__content">
+					<div class="main-block__about">
+						<h3 class="main-block__name">Александр Антропов</h3>
+						<h2 class="main-block__title title">web-разработчик</h2>
+					</div>
+					<div class="main-block__discuss">
+						<div class="main-block__button-block">
+							<a href = "#discussproject" class = "main-block__button" onclick = "OpenMessenger()">Обсудить проект</a>
+						</div>
+							
+						<div class="main-block__social social">
+							<a href="#" class="social_link">Vk</a>
+							<a href="#" class="social_link">Instagram</a>
+							<a href="#" class="social_link">Linkedin</a>
+						</div>
+					</div>
+					<!--FIGURE-->
+					<div class="circle__big"></div><!-- Круг большой-->
+					<div class="circle-small"></div><!--Круг малый-->
+					<div class="main-block__figurs">
+						<div class="block-figurs">
+							<div class="block-figurs__triangle"></div><!--Трегольник-->
+							<div class="block-figurs__circle"></div><!--Круг средний-->
+						</div>
+					</div>
+					<!-- END FIGURE-->
 				</div>
-
-				<div class="main-block__discuss">
-					<div class="main-block__button-block">
-						<a href = "#discussproject" class = "main-block__button" onclick = "OpenMessenger()">Обсудить проект</a>
-					</div>
-					   
-					<div class="main-block__social social">
-						<a href="#" class="social_link">Vk</a>
-						<a href="#" class="social_link">Instagram</a>
-						<a href="#" class="social_link">Linkedin</a>
-					</div>
-				</div>
-
-				<div class="main-block__skill">
-					<div class="main-block__description description">
-						<h3 class="description-title">FRONT-END</h3>
-						<p class="main-block__text description-text">HTML+CSS+JS кодирование дизайнов любой сложности</p>
-					</div>
-					<div class="main-block__description description">
-						<h3 class="description-title">BACK-END</h3>
-						<p class="main-block__text description-text">Разработка сложной back-end логики для готового front-end</p>
-					</div>
-					<div class="main-block__description description">
-						<h3 class="description-title">WORDPRESS</h3>
-						<p class="main-block__text description-text">Разработка сайтов - от блога до интернет магазина</p>
-					</div>
-					<div class="main-block__description description">
-						<h3 class="description-title">SEO ПРОДВИЖЕНИЕ</h3>
-						<p class="main-block__text description-text">Качественное улучшение позиций сайта в поисковой выдаче</p>
+				<div onclick = "openModal()" id = "skill">
+					<div class="main-block__skill">
+						<div class="main-block__description description">
+							<h3 class="description-title">FRONT-END</h3>
+							<p class="main-block__text description-text">HTML+CSS+JS кодирование дизайнов любой сложности</p>
+						</div>
+						<div class="main-block__description description">
+							<h3 class="description-title">BACK-END</h3>
+							<p class="main-block__text description-text">Разработка сложной back-end логики для готового front-end</p>
+						</div>
+						<div class="main-block__description description">
+							<h3 class="description-title">WORDPRESS</h3>
+							<p class="main-block__text description-text">Разработка сайтов - от блога до интернет магазина</p>
+						</div>
+						<div class="main-block__description description">
+							<h3 class="description-title">SEO ПРОДВИЖЕНИЕ</h3>
+							<p class="main-block__text description-text">Качественное улучшение позиций сайта в поисковой выдаче</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -201,10 +213,12 @@
 	<script>
 		function openModal() {
 	   document.getElementById("modal").style.top="0px";
+		document.getElementById("skill").style.display="none";
    	}
 
     	function closeModal() {
 	 		document.getElementById("modal").style.top="-840px";
+			 document.getElementById("skill").style.display="block";
    	}
 
 		function OpenMessenger() {

@@ -266,6 +266,8 @@ body {
 	}
 }
 
+
+
 .description {
 	max-width: 197px;
 	&-title {
@@ -305,6 +307,49 @@ body {
 		max-width: 1140px;
 		width: 100%;
 		height: 100%;
+	}
+
+	&__content {
+		position: relative;
+	}
+
+	&__figurs {
+		position: absolute;
+		top: 110px;
+		left: -131px;
+	}
+
+	.block-figurs {
+		position: relative;
+		&__triangle {
+			width: 66px;
+			height: 72px;
+			background: url('../icons/triangle.svg') 0 0 no-repeat;
+			position: absolute;
+			top: 15px;
+			left: -15px;
+		}
+		&__circle {
+			border-radius: 100%;
+			background-color: $white;
+			width: 253px;
+			height: 253px;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			z-index: -20;
+		}
+	}
+
+	.circle-small {
+		border-radius: 100%;
+		background-color: $white;
+		width: 106px;
+		height: 106px;
+		position: absolute;
+		bottom: 20px;
+		right: 90px;
+		z-index: -20;
 	}
 
 	&__name {
@@ -355,6 +400,9 @@ body {
 		padding: 0px 0px 15px 0px;
 		position: relative;
 		width: 170px; 
+		@media(max-width: $r_mob_500) {
+			width: 150px; 
+		}
 		&:hover {
 			cursor: pointer;
 		}
@@ -381,6 +429,7 @@ body {
 		color: $black;
 		display: block;
 		padding-left: 0px;
+		padding-right: 0px;
 		text-decoration: none;
 		font-size: 1.6rem;
 		font-weight: 700;
@@ -395,14 +444,24 @@ body {
 			position: absolute;
 			top: 5px;
 			right: 0px;
+			@media(max-width: $r_mob_500) {
+				top: 2px;
+				right: 5px;
+			}
 		}
 	}
 
 	&__skill {
 		display: flex;
 		justify-content: space-between;
+		@media(max-width: $r_tab_900) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 10px;
+		}
 	}
 }
+
 	
 // ВЫПАДАШКА на чистом CSS
 
