@@ -19,6 +19,13 @@ $r_desk_1280: 1280px;
 $r_desk_1350: 1350px;
 $r_desk_full_1750: 1750px;
 
+&>*:not(:last-child) {
+	border-right: 1px solid rgba($black, .2);
+	padding-right: 14px;
+	@media(max-width: $r_tab) {
+		padding-right: 10px;
+	}
+
 html {
 	font-size: 10px;
 	@media(max-width: $r_mob_500) {

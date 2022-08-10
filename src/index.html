@@ -102,107 +102,113 @@
 			</div>
 		</header>
 		<!-- Конец HEADER -->
-	</div>
-	<main class="page">
-		<div class="page__main-block main-block">
-			<div class="main-block__container __container">
-				<div class="main-block__cover _ibg">
-					<img src="images/bg.png" alt="Моё фото" class="main-block__img">
-				</div>
-				<div class="main-block__content">
-					<div class="main-block__about">
-						<h3 class="main-block__name">Александр Антропов</h3>
-						<h2 class="main-block__title title">web-разработчик</h2>
+		<main class="page">
+			<div class="page__main-block main-block">
+				<div class="main-block__container __container">
+					<div class="main-block__cover _ibg">
+						<img src="images/bg.png" alt="Моё фото" class="main-block__img">
 					</div>
-					<div class="main-block__discuss">
-						<div class="main-block__button-block">
-							<a href = "#discussproject" class = "main-block__button" onclick = "OpenMessenger()">Обсудить проект</a>
+					<div class="main-block__content">
+						<div class="main-block__about">
+							<h3 class="main-block__name">Александр Антропов</h3>
+							<h2 class="main-block__title title">web-разработчик</h2>
 						</div>
-							
-						<div class="main-block__social social">
-							<a href="#" class="social_link">Vk</a>
-							<a href="#" class="social_link">Instagram</a>
-							<a href="#" class="social_link">Linkedin</a>
+						<div class="main-block__discuss">
+							<div class="main-block__button-block">
+								<a href = "#discussproject" class = "main-block__button" onclick = "OpenMessenger()">Обсудить проект</a>
+							</div>
+								
+							<div class="social">
+								<li class="social__item">
+									<a href="#" class="social__link">Vk</a>
+								</li>
+								<li class="social__item">
+									<a href="#" class="social__link">Instagram</a>
+								</li>
+								<li class="social__item">
+									<a href="#" class="social__link">Linkedin</a>
+								</li>
+							</div>
 						</div>
+						<!--FIGURE-->
+						<div class="circle__big"></div><!-- Круг большой-->
+						<div class="circle-small"></div><!--Круг малый-->
+						<div class="main-block__figurs">
+							<div class="block-figurs">
+								<div class="block-figurs__triangle"></div><!--Трегольник-->
+								<div class="block-figurs__circle"></div><!--Круг средний-->
+							</div>
+						</div>
+						<!-- END FIGURE-->
 					</div>
-					<!--FIGURE-->
-					<div class="circle__big"></div><!-- Круг большой-->
-					<div class="circle-small"></div><!--Круг малый-->
-					<div class="main-block__figurs">
-						<div class="block-figurs">
-							<div class="block-figurs__triangle"></div><!--Трегольник-->
-							<div class="block-figurs__circle"></div><!--Круг средний-->
-						</div>
-					</div>
-					<!-- END FIGURE-->
-				</div>
-				<div onclick = "openModal()" id = "skill">
-					<div class="main-block__skill">
-						<div class="main-block__description description">
-							<h3 class="description-title">FRONT-END</h3>
-							<p class="main-block__text description-text">HTML+CSS+JS кодирование дизайнов любой сложности</p>
-						</div>
-						<div class="main-block__description description">
-							<h3 class="description-title">BACK-END</h3>
-							<p class="main-block__text description-text">Разработка сложной back-end логики для готового front-end</p>
-						</div>
-						<div class="main-block__description description">
-							<h3 class="description-title">WORDPRESS</h3>
-							<p class="main-block__text description-text">Разработка сайтов - от блога до интернет магазина</p>
-						</div>
-						<div class="main-block__description description">
-							<h3 class="description-title">SEO ПРОДВИЖЕНИЕ</h3>
-							<p class="main-block__text description-text">Качественное улучшение позиций сайта в поисковой выдаче</p>
+					<div onclick = "openModal()" id = "skill">
+						<div class="main-block__skill">
+							<div class="main-block__description description">
+								<h3 class="description-title">FRONT-END</h3>
+								<p class="main-block__text description-text">HTML+CSS+JS кодирование дизайнов любой сложности</p>
+							</div>
+							<div class="main-block__description description">
+								<h3 class="description-title">BACK-END</h3>
+								<p class="main-block__text description-text">Разработка сложной back-end логики для готового front-end</p>
+							</div>
+							<div class="main-block__description description">
+								<h3 class="description-title">WORDPRESS</h3>
+								<p class="main-block__text description-text">Разработка сайтов - от блога до интернет магазина</p>
+							</div>
+							<div class="main-block__description description">
+								<h3 class="description-title">SEO ПРОДВИЖЕНИЕ</h3>
+								<p class="main-block__text description-text">Качественное улучшение позиций сайта в поисковой выдаче</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</main>
+		</main>
+		<!--ВЫПАДАШКА (Обсудить проект)-->
+		<div class="messenger" id = "discussproject">
+			<div class="messenger__container">
+				<div class="messenger__header">
+					<h2 class="messenger__title">Расскажите о&nbsp;своем проекте</h2>
+					<h3 class="messenger__subtitle">Заполните все поля, и я свяжусь c вами в&nbspближайшее время</h3>
+				</div>
+				<div class="messenger__line"></div>
+				<form action="#" method = "post" class="messenger__form">
+					<h3 class="messenger__label">Телефон</h3>
+					<input type="tel" name = "userphone" placeholder = "Введите ваш телефон" class = "messenger__call" />
+					<h3 class="messenger__label">Почта</h3>
+					<input type = "email" name = "email" placeholder = "Введите ваш email" class = "messenger__call"/>
+					<h3 class="messenger__label">Выберите удобный способ связи</h3>
+					<label class="drop">
+						<input type="checkbox" id="target-drop-example"> <!-- Toggle Drop -->
+						<span class="control">Telegram</span> <!-- Fake button -->
 
-	<!--ВЫПАДАШКА (Обсудить проект)-->
-	<div class="messenger" id = "discussproject">
-		<div class="messenger__container">
-			<div class="messenger__header">
-				<h2 class="messenger__title">Расскажите о своем проекте</h2>
-				<h3 class="messenger__subtitle">Заполните все поля, и я свяжусь c вами в&nbspближайшее время</h3>
+						<!-- Items -->
+						<ul class="drop-items" id = "itemsgrey">
+							<li class="item-drop">
+								<a target="_blank" href="#">WhatsApp </a>
+							</li>
+							<li class="item-drop">
+								<a target="_blank" href="#">Viber</a>
+							</li>
+							<li class="item-drop">
+								<a target="_blank" href="#">Звонок на телефон</a>
+							</li>
+							<li class="item-drop">
+								<a target="_blank" href="#">SMS сообщение</a>
+							</li>
+						</ul>
+						<div class = "messenger__button">
+							<button type = "submit" class="messenger__btn">Отправить</button>
+						</div>
+						<!-- Alternative to close dropdown with click out -->
+						<label for="target-drop-example" class="overlay-close"></label>
+					</label>   
+					<!-- END Dropdown -->
+				</form>
+				<button class="messenger__close" onclick = "CloseMessenger()"></button>
 			</div>
-			<div class="messenger__line"></div>
-			<form action="#" method = "post" class="messenger__form">
-				<h3 class="messenger__label">Телефон</h3>
-				<input type="tel" name = "userphone" placeholder = "Введите ваш телефон" class = "messenger__call" />
-				<h3 class="messenger__label">Почта</h3>
-				<input type = "email" name = "email" placeholder = "Введите ваш email" class = "messenger__call"/>
-				<h3 class="messenger__label">Выберите удобный способ связи</h3>
-				<label class="drop">
-					<input type="checkbox" id="target-drop-example"> <!-- Toggle Drop -->
-					<span class="control">Telegram</span> <!-- Fake button -->
-
-					<!-- Items -->
-					<ul class="drop-items" id = "itemsgrey">
-						<li class="item-drop">
-							<a target="_blank" href="#">WhatsApp </a>
-						</li>
-						<li class="item-drop">
-							<a target="_blank" href="#">Viber</a>
-						</li>
-						<li class="item-drop">
-							<a target="_blank" href="#">Звонок на телефон</a>
-						</li>
-						<li class="item-drop">
-							<a target="_blank" href="#">SMS сообщение</a>
-						</li>
-					</ul>
-					<div class = "messenger__button">
-						<button type = "submit" class="messenger__btn">Отправить</button>
-					</div>
-					<!-- Alternative to close dropdown with click out -->
-					<label for="target-drop-example" class="overlay-close"></label>
-				</label>   
-				<!-- END Dropdown -->
-			</form>
-			<button class="messenger__close" onclick = "CloseMessenger()"></button>
 		</div>
+		<!-- КОНЕЦ ВЫПАДАШКИ (Обсудить проект)-->
 	</div>
 
 	<footer class="footer">
@@ -222,7 +228,7 @@
 	}
 
 	function OpenMessenger() {
-		document.getElementById('discussproject').style.top = '370px';
+		document.getElementById('discussproject').style.top = '0px';
 		document.getElementById("discussproject").style.display = 'block';
 		document.body.style.background = 'rgba(1, 1, 1, 0.5)'; 
 		document.body.style.overflow = 'hidden'; 
