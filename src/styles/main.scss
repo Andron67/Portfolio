@@ -313,9 +313,22 @@ body {
 	}
 
 	&__img {
+		display: block;
 		max-width: 1140px;
 		width: 100%;
 		height: 100%;
+		@media(max-width: $r_mob_500) {
+			display: none;
+		}
+		&-mob {
+			display: none;
+			@media(max-width: $r_mob_500) {
+				max-width: 480px;
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
+		}
 	}
 
 	&__content {
