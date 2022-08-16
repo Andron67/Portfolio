@@ -868,6 +868,11 @@ body {
 		padding-right: 10px;
 		display: flex;
 		align-items: center;
+		@media(max-width: $r_mob_500) {
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+		}
 	}
 	&__number {
 		display: block;
@@ -876,6 +881,30 @@ body {
 		font-size: 2.8rem;
 		font-weight: 400;
 		line-height: 1.5;
+		@media(max-width: $r_tab_900) {
+			font-size: 2.2rem;
+			padding-right: 2.0rem;
+		}
+		@media(max-width: $r_tab) {
+			font-size: 1.6rem;
+		}
+		@media(max-width: $r_mob_500) {
+			display: none;
+			font-size: 2rem;
+		}
+		&-mob {
+			display: none;
+			color: $black;
+		   font-size: 2.8rem;
+		   font-weight: 400;
+		  
+			@media(max-width: $r_mob_500) {
+				font-size: 2rem;
+				display: block;
+				margin: 0rem;
+				padding: 0rem;
+			}
+		}
 	}
 	&__text {
 		display: block;
@@ -883,6 +912,27 @@ body {
 		font-size: 2.8rem;
 		font-weight: 400;
 		line-height: 1.5;
+		@media(max-width: $r_tab_900) {
+			font-size: 2.2rem;
+		}
+		@media(max-width: $r_tab) {
+			font-size: 1.6rem;
+		}
+		@media(max-width: $r_mob_500) {
+			display: none;
+		}
+		&-mob {
+			display: none;
+			color: $black;
+		   font-size: 2.8rem;
+		   font-weight: 400;
+			@media(max-width: $r_mob_500) {
+				font-size: 2rem;
+				display: block;
+				padding: 0rem;
+				margin: 0rem;
+			}
+		}
 	}
 	&__youactions {
 		border-top: 1px solid $black;
@@ -895,6 +945,9 @@ body {
 			font-size: 1.6rem;
 			font-weight: 400;
 			line-height: 1.5;
+			@media(max-width: $r_mob_500) {
+			   font-size: 1.5rem;
+			}
 		}
 	}
 }
@@ -902,4 +955,4 @@ body {
 .stage {
 	display: grid;
 		grid-template-columns: repeat(2, 1fr);
-}
+	}
