@@ -228,16 +228,19 @@ body {
 }
 
 .social {
-	display: flex;
-	gap: 50px;
-	height: 26px;
-	@media(max-width: $r_mob_500) {
+	&__list {
+		display: flex;
+		gap: 50px;
+		height: 26px;
+		@media(max-width: $r_mob_500) {
 		gap: 40px;
-	}
-	@media(max-width: $r_mob_400) {
+		}
+		@media(max-width: $r_mob_400) {
 		gap: 14px;
 	}
 
+	}
+	
 	&__item {
 		list-style-type: none;
 		position: relative;
@@ -857,6 +860,9 @@ body {
 
 /* STAGES-ORDERING */
 .stages-ordering {
+	&__title {
+		display: none;
+	}
 	&__container {
 		border-bottom: 1px solid $black;
 		margin-bottom: 100px;
@@ -954,5 +960,35 @@ body {
 
 .stage {
 	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+/* PORTFOLIO */
+.portfolio {
+	&__title-block {
+		margin-top: 143px;
+	}
+	&__title {
+		color: $black;
+		font-size: 7.4rem;
+		font-weight: 700;
+		line-height: 1.0;
+	}
+	&__block {
+		margin-bottom: 400px;
+		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 	}
+	&__content {
+		
+	}
+	&__content:nth-child(1) {
+		border-bottom: 1px solid $black;
+	}
+	&__cover  {
+		padding: 60px 0px;
+	}
+	&__cover:nth-child(2)  {
+		border-bottom: 1px solid $black;
+	}
+}

@@ -72,3 +72,7 @@ function CloseMessenger() {
 	document.getElementById('DiscussProject').style.visibility = 'hidden';
 	document.getElementById('bodyclose').style.background = '#F3F2F0'
 }
+
+<img src="images/girl.png" alt="Сайт1 Девушка">
+
+<img src="images/lemon.png" alt="Сайт1 Девушка">
