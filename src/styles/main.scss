@@ -338,76 +338,6 @@ body {
 		position: relative;
 	}
 
-	&__figurs {
-		position: absolute;
-		top: 110px;
-		left: -131px;
-		@media(max-width: $r_desk_1350) {
-			left: 0px;
-		}
-	}
-
-	.block-figurs {
-		position: relative;
-		&__triangle {
-			width: 66px;
-			height: 72px;
-			background: url('../icons/triangle.svg') 0 0 no-repeat;
-			position: absolute;
-			top: 15px;
-			left: -15px;
-			z-index: -10;
-			@media(max-width: $r_tab) {
-				width: 33px;
-				height: 41px;
-				background: url('../icons/triangle2.svg') 0 0 no-repeat;
-				top: 20px;
-				left: 0px;
-			}
-
-			@media(max-width: $r_mob_500) {
-				top: 90px;
-				left: 25px;
-			}
-		}
-		&__circle {
-			border-radius: 100%;
-			background-color: $white;
-			width: 253px;
-			height: 253px;
-			position: absolute;
-			top: 0px;
-			left: 0px;
-			z-index: -20;
-			@media(max-width: $r_tab) {
-				width: 135px;
-				height: 135px;
-				left: 10px;
-			}
-			@media(max-width: $r_mob_500) {
-				top: -35px;
-				left: -40px;
-			}
-		}
-	}
-
-	.circle-small {
-		border-radius: 100%;
-		background-color: $white;
-		width: 106px;
-		height: 106px;
-		position: absolute;
-		bottom: 20px;
-		right: 90px;
-		z-index: -20;
-		@media(max-width: $r_mob_500) {
-			width: 60px;
-			height: 60px;
-			bottom: 40px;
-			right: 50px;
-		}
-	}
-
 	&__name {
 		display: block;
 		color: $black;
@@ -514,6 +444,94 @@ body {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			gap: 10px;
+		}
+	}
+	&__circle-small {
+		position: absolute;
+		bottom: 35px;
+		right: 35px;
+		@media(max-width: $r_mob_500) {
+			bottom: 53px;
+			right: 40px;
+		}
+	}
+	&__figurs {
+		position: absolute;
+		top: 110px;
+		left: -131px;
+		@media(max-width: $r_desk_1350) {
+			left: 0px;
+		}
+	}
+}
+
+.block-figurs {
+	position: relative;
+		&__triangle {
+			width: 66px;
+			height: 72px;
+			background: url('../icons/triangle.svg') 0 0 no-repeat;
+			position: absolute;
+			top: 15px;
+			left: -15px;
+			z-index: -10;
+			@media(max-width: $r_tab) {
+				width: 33px;
+				height: 41px;
+				background: url('../icons/triangle2.svg') 0 0 no-repeat;
+				top: 20px;
+				left: 0px;
+			}
+
+			@media(max-width: $r_mob_500) {
+				top: 90px;
+				left: 25px;
+			}
+		}
+}
+
+.circle {
+	border-radius: 100%;
+	background-color: $white;
+	width: 253px;
+	height: 253px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: -20;
+	@media(max-width: $r_tab) {
+		width: 135px;
+		height: 135px;
+		left: 10px;
+	}
+	@media(max-width: $r_mob_500) {
+		top: -35px;
+		left: -40px;
+	}
+	&-small {
+		border-radius: 100%;
+		background-color: $white;
+		width: 106px;
+		height: 106px;
+		z-index: -20;
+		@media(max-width: $r_mob_500) {
+			width: 60px;
+			height: 60px;
+		}
+	}
+	&-big {
+		border-radius: 100%;
+		background-color: $white;
+		width: 465px;
+		height: 465px;
+		z-index: -20;
+		@media(max-width: $r_tab) {
+			width: 250px;
+			height: 250px;
+		}
+		@media(max-width: $r_mob_500) {
+			width: 197px;
+			height: 197px;
 		}
 	}
 }
@@ -723,8 +741,8 @@ body {
 		max-width: 320px;
 		width: 100%;
 	}  
-    &:after {
-      content: " ";
+    &::after {
+      content: '';
       display:inline-block;      
       height: 7px;
       width: 12px;
@@ -957,7 +975,7 @@ body {
 		}
 	}
 }
-
+//  Стадии разработки, секция 2
 .stage {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -965,30 +983,119 @@ body {
 
 /* PORTFOLIO */
 .portfolio {
+	&__container {
+		position: relative;
+	}
+	&__circle-big {
+		position: absolute;
+		top: -90px;
+		right: 30%;
+		@media(max-width: $r_tab) {
+			top: -50px;
+			right: 30%;
+		}
+		@media(max-width: $r_mob_600) {
+			top: -50px;
+			right: 0%;
+		}
+	}
 	&__title-block {
 		margin-top: 143px;
+		@media(max-width: $r_tab) {
+			margin-top: 100px;
+		}
 	}
 	&__title {
 		color: $black;
+		text-transform: uppercase;
 		font-size: 7.4rem;
 		font-weight: 700;
 		line-height: 1.0;
+		@media(max-width: $r_tab) {
+			font-size: 5.4rem;
+		}
+		@media(max-width: $r_mob_500) {
+			font-size: 3.5rem;
+		}
 	}
 	&__block {
 		margin-bottom: 400px;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
+		@media(max-width: $r_mob_600) {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 	&__content {
-		
+		padding-top: 60px;
+		&-title {
+			display: block;
+			margin-bottom: 45px;
+			color: $black;
+			font-size: 2.8rem;
+			font-weight: 700;
+			line-height: 1.0;
+			@media(max-width: $r_tab) {
+				font-size: 2.4rem;
+				margin-bottom: 20px;
+			}
+			@media(max-width: $r_mob_500) {
+				font-size: 2rem;
+			}
+		}
+		&-description {
+			color: rgba($black, .8);
+			font-size: 1.6rem;
+			font-weight: 400;
+			line-height: 1.5;
+			@media(max-width: $r_tab) {
+				font-size: 1.3rem;
+				line-height: 1.0;
+			}
+		}
+		&-time {
+			display: block;
+			color: $black;
+			font-size: 1.6rem;
+			font-weight: 700;
+			line-height: 1.5;
+			margin-top: 30px;
+			@media(max-width: $r_tab) {
+				margin-top: 20px;
+				font-size: 1.5rem;
+				line-height: 1.0;
+			}
+		}
 	}
 	&__content:nth-child(1) {
 		border-bottom: 1px solid $black;
 	}
 	&__cover  {
-		padding: 60px 0px;
+		padding: 60px 10px;
 	}
 	&__cover:nth-child(2)  {
 		border-bottom: 1px solid $black;
+	}
+	@media(max-width: $r_mob_600) {
+		&__cover:nth-child(4)  {
+			border-bottom: 1px solid $black;
+		}
+	}
+	&__image {
+		max-width: 560px;
+		width: 100%;
+	}
+}
+
+/* -- ДОПОЛНИТЕЛЬНЫЕ НАВЫКИ СЕКЦИЯ №4-- */
+.extraskills {
+	&__title-hidden {
+		display: none;
+	}
+	&__description {
+
+		&-text {
+			
+		}
 	}
 }
