@@ -1170,3 +1170,19 @@ body {
 		}
 	}
 }
+
+/* -- МОИ ИНСТРУМЕНТЫ СЕКЦИЯ №5-- */
+.tool {
+	margin-bottom: 200px;
+	&__title-hidden {
+		display: none;
+	}
+	&__table {
+		width: 100%;
+		border: 1px solid #000;
+		border-collapse: collapse;
+	}
+	&__item {
+		border: 1px solid #000;
+	}
+}
