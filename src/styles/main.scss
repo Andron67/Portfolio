@@ -1019,7 +1019,7 @@ body {
 		}
 	}
 	&__block {
-		margin-bottom: 400px;
+		margin-bottom: 180px;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		@media(max-width: $r_mob_600) {
@@ -1093,9 +1093,16 @@ body {
 		display: none;
 	}
 	&__description {
-
+		border-bottom: 1px solid $black;
+		padding-bottom: 80px;
 		&-text {
-			
+			margin: 0px;
+			max-width: 870px;
+			display: block;
+			color: $black;
+			font-size: 2.8rem;
+			font-weight: 400;
+			line-height: 1.5;
 		}
 	}
 }
