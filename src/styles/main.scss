@@ -1224,29 +1224,76 @@ body {
 		color: $white;
 		text-align: center;
 		padding: 27px 15px;
+		@media(max-width: $r_tab) {
+			padding: 15px 10px;
+			width: 170px;
+		}
+		@media(max-width: $r_mob_500) {
+			padding: 10px 5px;
+			width: 130px;
+		}
   
 		/* Position the tooltip text - see examples below! */
 	   position: absolute;
 		top: 90px;
 		right: -92px;
+		@media(max-width: $r_tab) {
+			top: 90px;
+			right: -57px;
+		}
 		z-index: 1;
+		transition: .3s;
+		&:hover {
+			visibility: visible;
+		}
+	}
+	&__title {
+		font-size: 10px;
+		font-weight: 500;
+	}
+	&__text {
+		display: block;
+		font-size: 10px;
+		font-weight: 500;
+		width: 202px;
+		@media(max-width: $r_tab) {
+			width: 140px;
+		}
+		@media(max-width: $r_mob_500) {
+			width: 100px;
+		}
+	}
+	
+	&:hover &__content {
+		visibility: visible;
 	}
  }
- 
+
+ .php {
+	top: 65px;
+	right: -78px;
+	@media(max-width: $r_tab) {
+		right: -42px;
+	}
+ }
+
+ .css {
+	right: -88px;
+	@media(max-width: $r_tab) {
+		right: -52px;
+	}
+ }
+
  /* Tooltip text */
  .tooltip .tooltip__content::after {
-	content: " ";
- 	position: absolute;
-  	bottom: 100%;  /* At the top of the tooltip */
-   left: 50%;
-  	margin-left: -5px;
-   border-width: 5px;
-	border-style: solid;
-	border-color: transparent transparent $red transparent;
+		content: " ";
+ 		position: absolute;
+  		bottom: 100%;  /* At the top of the tooltip */
+   	left: 50%;
+  		margin-left: -5px;
+  		 border-width: 5px;
+		border-style: solid;
+		border-color: transparent transparent $red transparent;
 }
 
-.tooltip:hover .tooltip__content {
-	visibility: visible;
- }
- 
  
