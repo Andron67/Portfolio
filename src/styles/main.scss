@@ -1093,7 +1093,14 @@ body {
 
 /* -- ДОПОЛНИТЕЛЬНЫЕ НАВЫКИ СЕКЦИЯ №4-- */
 .extraskills {
-	margin-bottom: 300px;
+	margin-bottom: 160px;
+	@media(max-width: $r_tab) {
+		margin-bottom: 100px;
+	}
+	@media(max-width: $r_mob_500) {
+		margin-bottom: 60px;
+	}
+
 	&__title-hidden {
 		display: none;
 	}
@@ -1173,7 +1180,7 @@ body {
 
 /* -- МОИ ИНСТРУМЕНТЫ СЕКЦИЯ №5-- */
 .tool {
-	margin-bottom: 200px;
+	margin: 0px 5px 200px 5px;
 	&__title-hidden {
 		display: none;
 	}
@@ -1184,5 +1191,62 @@ body {
 	}
 	&__item {
 		border: 1px solid #000;
+		text-align: center;
+		padding: 30px 10px;
+		@media(max-width: $r_mob_500) {
+			padding: 20px 10px;
+		}
+		@media(max-width: $r_mob_360) {
+			padding: 10px 10px;
+		}
+	}
+	&__icons {
+		max-width: 105px;
+		width: 100%;
+		object-fit: cover;
+		filter: grayscale(1);
+		&:hover {
+			filter: grayscale(0);
+		}
 	}
 }
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+ }
+
+ .tooltip {
+	&__content {
+		visibility: hidden;
+		width: 232px;
+		background-color: $red;
+		color: $white;
+		text-align: center;
+		padding: 27px 15px;
+  
+		/* Position the tooltip text - see examples below! */
+	   position: absolute;
+		top: 90px;
+		right: -92px;
+		z-index: 1;
+	}
+ }
+ 
+ /* Tooltip text */
+ .tooltip .tooltip__content::after {
+	content: " ";
+ 	position: absolute;
+  	bottom: 100%;  /* At the top of the tooltip */
+   left: 50%;
+  	margin-left: -5px;
+   border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent $red transparent;
+}
+
+.tooltip:hover .tooltip__content {
+	visibility: visible;
+ }
+ 
+ 
