@@ -1302,6 +1302,8 @@ body {
 		border-color: transparent transparent $red transparent;
 }
 
+/* -- МОИ ЦЕНЫ СЕКЦИЯ №6-- */
+
 .price {
 	margin-bottom: 300px;
 	&__title-hidden {
@@ -1430,6 +1432,14 @@ body {
 				font-size: 1.4rem;
 			}
 		}
+	}
+}
+
+/* -- ОБРАТНАЯ СВЯЗЬ СЕКЦИЯ №7-- */
+.feedback {
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
