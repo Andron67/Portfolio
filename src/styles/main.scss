@@ -1298,6 +1298,68 @@ body {
 
 .price {
 	margin-bottom: 300px;
+	&__title-hidden {
+		display: none;
+	}
+	&__header {
+		border-bottom: 1px solid $black;
+		display: flex;
+		padding: 60px 0px 80px 0px;
+		justify-content: space-between;
+	}
+	&__title {
+		margin: 0px;
+		color: $black;
+		text-transform: uppercase;
+		font-size: 2.8rem;
+		font-weight: 700;
+	}
+	&__description {
+		margin: 0px;
+		flex-basis: 560px;
+		color: rgba($black, .8);
+		font-size: 2.8rem;
+		font-weight: 400;
+	}
+	&__block {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	&__item {
+		border-bottom: 1px solid #000;
+		padding-bottom: 70px;
+		&-title {
+			color: $black;
+			font-size: 1.6rem;
+			font-weight: 700;
+		}
+		&-link {
+			color: rgba($black, .8);
+			font-size: 1.6rem;
+			font-weight: 400;
+		}
+		&-price {
+			color: $black;
+			font-size: 4.2rem;
+			font-weight: 700;
+		}
+	}
+	&__content {
+			max-width: 380px;
+			width: 100%;
+		&-title {
+			display: block;
+			color: $black;
+			font-size: 2.8rem;
+			font-weight: 400;
+		}
+		&-text {
+			display: block;
+			color: rgba($black, .8);
+			font-size: 1.6rem;
+			font-weight: 500;
+		}
+	}
 }
 
  
