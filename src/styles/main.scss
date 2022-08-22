@@ -1307,7 +1307,9 @@ body {
 	&__title-hidden {
 		display: none;
 	}
+
 	&__header {
+		position: relative;
 		border-bottom: 1px solid $black;
 		display: flex;
 		padding: 60px 0px 80px 0px;
@@ -1318,6 +1320,24 @@ body {
 		@media(max-width: $r_mob_500) {
 			flex-direction: column;
 			padding: 10px 10px 30px 10px;
+		}
+	}
+	&__circle-small {
+		position: absolute;
+		top: 25px;
+		left: -50px;
+		@media(max-width: $r_mob_500) {
+			top: -12px;
+		   left: -30px;
+		}
+		&-double {
+			position: absolute;
+			bottom: 85px;
+		   right: 90%;
+			@media(max-width: $r_tab) {
+				bottom: 70px;
+		  	   right: 85%;
+			}
 		}
 	}
 	&__title {
@@ -1379,7 +1399,11 @@ body {
 				font-size: 2.6rem;
 			}
 		}
+		&:nth-child(2) {
+			position: relative;
+		}
 	}
+
 	&__content {
 			max-width: 380px;
 			width: 100%;
