@@ -683,6 +683,10 @@ body {
 			background-color: rgba($red, .5);
 			cursor: pointer;
 		}
+		@media(max-width: $r_mob_600) {
+			max-width: 560px;
+		   width: 100%;
+		}
 
 		@media(max-width: $r_mob_360) {
 			max-width: 300px;
@@ -1305,7 +1309,13 @@ body {
 /* -- МОИ ЦЕНЫ СЕКЦИЯ №6-- */
 
 .price {
-	margin-bottom: 300px;
+	margin-bottom: 100px;
+	@media(max-width: $r_tab) {
+		margin-bottom: 60px;
+	}
+	@media(max-width: $r_mob_500) {
+		margin-bottom: 30px;
+	}
 	&__title-hidden {
 		display: none;
 	}
@@ -1405,6 +1415,12 @@ body {
 			position: relative;
 		}
 	}
+	&__item:nth-child(5) {
+		border-bottom: none;
+	}
+	&__item:nth-child(6) {
+		border-bottom: none;
+	}  
 
 	&__content {
 			max-width: 380px;
@@ -1437,9 +1453,82 @@ body {
 
 /* -- ОБРАТНАЯ СВЯЗЬ СЕКЦИЯ №7-- */
 .feedback {
-	&__container {
+	margin-bottom: 200px;
+	&__grid {
+		position: relative;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
+		@media(max-width: $r_tab) {
+			padding: 0px 10px;
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	&__figure {
+		position: absolute;
+		top: -20px;
+		left: -100px;
+		@media(max-width: $r_desk_1350) {
+			left: 0px;
+		}
+	}
+	&__item {
+		border-bottom: 1px solid $black;
+	}
+	&__item:nth-child(2) {
+		@media(max-width: $r_tab) {
+			border-bottom: none;
+		}
+	}
+	
+	&__item:nth-child(4) {
+		display: flex;
+		padding: 0px 10px 90px 0px;
+		flex-direction: column;
+		justify-content: flex-end;
+		@media(max-width: $r_tab) {
+			order: 5;
+		}
+	}
+
+	&__item:nth-child(5) {
+		@media(max-width: $r_tab) {
+			border-bottom: none;
+		}
+	}
+	
+	&__title {
+		display: block;
+		max-width: 286px;
+		color: $black;
+		text-transform: uppercase;
+		font-size: 2.8rem;
+		font-weight: 700;
+		@media(max-width: $r_tab_900) {
+			font-size: 2.4rem;
+		}
+	}
+	&__text {
+		display: block;
+		margin: 0px 0px 60px 0px;
+		max-width: 483px;
+		width: 100%;
+		color: $black;
+		font-size: 2.8rem;
+		font-weight: 400;
+		@media(max-width: $r_tab_900) {
+			font-size: 2.4rem;
+			max-width: 460px;
+		}
+	}
+	&__form {
+		margin: 60px 10px 100px 0px;
+		max-width: 560px;
+		width: 100%;
+		@media(max-width: $r_mob_600) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 }
 
