@@ -74,6 +74,9 @@ body {
 		@media(max-width: $r_tab_900) {
 			gap: 10px;
 		}
+		@media(max-width: $r_mob_500) {
+			gap: 2px;
+		}
 	}
 
 	&__item {
@@ -88,6 +91,12 @@ body {
 		transition: .9s;
 		&:hover {
 			color: $red;
+		}
+	}
+
+	&__connect {
+		@media(max-width: $r_tab) {
+			display: none;
 		}
 	}
 
@@ -116,9 +125,6 @@ body {
 		border-left: 1px solid rgba($black, .2);
 		display: block;
 		padding: 5px 0px 5px 13px;
-	}
-	@media(max-width: $r_tab) {
-		display: none;
 	}
 }
 
@@ -159,6 +165,12 @@ body {
 	&__header {
 		height: 80px;
 		border-bottom: 1px solid $black;
+	}
+
+	&__connect {
+		@media(max-width: $r_tab) {
+			display: block;
+		}
 	}
 
 	&__list {
@@ -236,10 +248,9 @@ body {
 		}
 		@media(max-width: $r_mob_400) {
 		gap: 14px;
+		}
 	}
 
-	}
-	
 	&__item {
 		list-style-type: none;
 		position: relative;
@@ -264,7 +275,6 @@ body {
 			}
 		}
 	}
-
 	&__link {
 		display: block;
 		color: $black;
@@ -275,6 +285,18 @@ body {
 		transition: .3s;
 		&:hover {
 			color: $red;
+		}
+		&-modal {
+			display: block;
+			color: $black;
+			text-align: center;
+			text-decoration: none;
+			font-size: 1.2rem;
+			line-height: 1.5;
+			transition: .3s;
+			&:hover {
+				color: $red;
+			}
 		}
 	}
 }
@@ -1453,6 +1475,9 @@ body {
 /* -- ОБРАТНАЯ СВЯЗЬ СЕКЦИЯ №7-- */
 .feedback {
 	margin-bottom: 100px;
+	@media(max-width: $r_mob_500) {
+		margin-bottom: 43px;
+	}
 	&__grid {
 		position: relative;
 		display: grid;
@@ -1536,6 +1561,34 @@ body {
 	&__navigation {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
+		@media(max-width: $r_tab) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	&__connect {
+		@media(max-width: $r_tab) {
+			display: block;
+		}
+	}
+	&__tel {
+		color: $black;
+		text-decoration: none;
+		font-size: 1.4rem;
+		font-weight: 400;
+		@media(max-width: $r_mob_500) {
+			font-size: 1.75rem;
+		}
+	}
+	&__mail {
+		color: $black;
+		text-decoration: none;
+		font-size: 1.4rem;
+		font-weight: 400;
+		@media(max-width: $r_mob_500) {
+			font-size: 1.75rem;
+		}
 	}
 	&__copy {
 		display: flex;
