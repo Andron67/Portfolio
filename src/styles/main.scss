@@ -29,7 +29,6 @@ html {
 }
 
 body {
-	background-color: $grey;
 	font-size: 1.4rem;
 	font-family: $font-inter;
 	font-weight: 400;
@@ -158,7 +157,7 @@ body {
 	padding: 0px 10px;
 	position: absolute;
 	z-index: 100;
-	top: -840px;
+	top: -900px;
 	right: 5px;
 	box-sizing: border-box;
 	transition: .3s;
