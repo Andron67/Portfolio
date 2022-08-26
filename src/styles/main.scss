@@ -333,6 +333,9 @@ body {
 // MAIN 
 .page {
 	margin-top: 160px;
+	@media(max-width: $r_mob_500) {
+		margin-top: 90px;
+	}
 }
 .main-block {
 	&__about {
