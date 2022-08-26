@@ -94,7 +94,7 @@ body {
 		color: $black;
 		line-height: 1.5;
 		text-decoration: none;
-		transition: .9s;
+		transition: .3s;
 		&:hover {
 			color: $red;
 		}
@@ -818,12 +818,12 @@ body {
       a {        
         display:block;
 		  font-size: 1.2rem;
-        color: rgba($black, .4);
+        color: rgba($black, .8);
         text-decoration: none;
         padding: .6rem;
         transition: all .3s ease;
         &:hover {
-			color: $black;
+			color: $red;
 		  }
       }
     }

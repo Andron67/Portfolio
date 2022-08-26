@@ -20,19 +20,19 @@
 					<nav class="header__menu menu">
 						<ul class="header__list">
 							<li class="header__item">
-								<a href="#" class="header__link">Обо мне </a>
+								<a href="#aboutmy" class="header__link">Обо мне</a>
 							</li>
 							<li class="header__item">
-								<a href="#" class="header__link">Портфолио</a>
+								<a href="#portfoliomy" class="header__link">Портфолио</a>
 							</li>
 							<li class="header__item">
-								<a href="#" class="header__link">Этапы работ</a>
+								<a href="#stagesorderingmy" class="header__link">Этапы работ</a>
 							</li>
 							<li class="header__item">
-								<a href="#" class="header__link">Цены</a>
+								<a href="#pricemy" class="header__link">Цены</a>
 							</li>
 							<li class="header__item">
-								<a href="#" class="header__link">Обратная связь</a>
+								<a href="#feedbackmy" class="header__link">Обратная связь</a>
 							</li>
 						</ul>
 					</nav>
@@ -187,7 +187,7 @@
 		</main>
 
 		<!-- ABOUT СЕКЦИЯ №1-->
-		<section class="about">
+		<section class="about" id = "aboutmy">
 			<div class="about__container __container">
 				<h2 class="about__title-hidden">Обо мне</h2>
 				<div class="about__block-grid">
@@ -233,7 +233,7 @@
 		</section>
 
 		<!-- Секция STAGESORDERING СЕКЦИЯ №2 -->
-		<section class="stages-ordering">
+		<section id = "stagesorderingmy" class="stages-ordering">
 			<h2 class="stages-ordering__title">Этапы разработки</h2>
 			<div class="stages-ordering__container __container">
 				<div class="stages-ordering__stage-1 stage">
@@ -267,7 +267,7 @@
 		</section>
 
 		<!-- Секция PORTFOLIO СЕКЦИЯ №3 -->
-		<section class="potrfolio">
+		<section id = "portfoliomy" class="potrfolio">
 			<div class="portfolio__container __container">
 				<div class="portfolio__circle-big circle-big"></div><!-- Круг большой-->
 				<div class="portfolio__title-block">
@@ -495,7 +495,7 @@
 		</section>
 
 		<!-- PRICE СЕКЦИЯ №6-->
-		<section class="price">
+		<section id = "pricemy" class="price">
 			<h2 class="price__title-hidden">Тарифы</h2>
 			<div class="price__container __container">
 				<div class="price__header">
@@ -575,7 +575,7 @@
 		</section>
 
 		<!-- DISCUSSPROJECT СЕКЦИЯ №7-->
-		<section class="feedback">
+		<section id = "feedbackmy" class="feedback">
 			<div class="feedback__container __container">
 				<div class="feedback__grid">
 					<div class="feedback__figure">
@@ -738,12 +738,26 @@
 		<!-- КОНЕЦ ВЫПАДАШКИ (Обсудить проект)-->
 	</div>
 
-	<footer class="footer">
-
-	</footer>
-
-<!-- Скрипт модального окна -->
 <script>
+//---------------------------------------------------------
+// Smooth Scroll Якорь Скролл
+const links = document.querySelectorAll(".banner-link");
+
+for (const link of links) {
+link.addEventListener("click", clickHandler);
+}
+
+function clickHandler(e) {
+e.preventDefault();
+const href = this.getAttribute("href");
+
+document.querySelector(href).scrollIntoView({
+	behavior: "smooth"
+});
+}
+//---------------------------------------------------------
+
+//-- Скрипт модального окна 
 	function openModal() {
 		document.getElementById("modal").style.top="0px";
 		document.getElementById("skill").style.display="none";
@@ -753,6 +767,7 @@
 		document.getElementById("modal").style.top="-900px";
 		document.getElementById("skill").style.display="block";
 	}
+//-------------------------------------------------------
 
 	function OpenMessenger() {
 		document.getElementById('discussproject').style.top = '0px';
