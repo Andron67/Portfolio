@@ -1108,20 +1108,19 @@ body {
 			}
 		}
 	}
-	&__content:nth-child(1) {
+	&__content {
 		border-bottom: 1px solid $black;
 	}
 	&__cover  {
+		border-bottom: 1px solid $black;
 		padding: 60px 10px;
 	}
-	&__cover:nth-child(2)  {
-		border-bottom: 1px solid $black;
-	}
-	@media(max-width: $r_mob_600) {
-		&__cover:nth-child(4)  {
-			border-bottom: 1px solid $black;
+	&__content {
+		@media(max-width: $r_mob_600) {
+			border-bottom: none;
 		}
 	}
+
 	&__image {
 		max-width: 560px;
 		width: 100%;
