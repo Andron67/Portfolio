@@ -29,7 +29,6 @@ html {
 }
 
 body {
-	background-color: $grey;
 	font-size: 1.4rem;
 	font-family: $font-inter;
 	font-weight: 400;
@@ -62,7 +61,7 @@ body {
 	}
 	padding: 40px 0px 50px 0px;
 	@media(max-width: $r_mob_500) {
-		padding: 20px 0px 40px 0px;
+		padding: 20px 0px 30px 0px;
 	}
 	&__container {
 		display: flex;
@@ -133,12 +132,18 @@ body {
 	&_tel {
 		display: block;
 		padding: 5px 13px;
+		@media(max-width: $r_mob_360) {
+			padding: 5px 5px;
+		}
 	}
 
 	&_mail {
 		border-left: 1px solid rgba($black, .2);
 		display: block;
 		padding: 5px 0px 5px 13px;
+		@media(max-width: $r_mob_360) {
+			padding: 5px 0px 5px 5px;
+		}
 	}
 }
 
@@ -340,7 +345,10 @@ body {
 
 // MAIN 
 .page {
-	margin-top: 125px;
+	position: relative;
+	background-color: $grey;
+	margin-top: 121px;
+	z-index: -60;
 	@media(max-width: $r_mob_500) {
 		margin-top: 90px;
 	}
@@ -505,6 +513,7 @@ body {
 		position: absolute;
 		top: 110px;
 		left: -131px;
+		z-index: -20;
 		@media(max-width: $r_desk_1350) {
 			left: 0px;
 		}
@@ -877,10 +886,10 @@ body {
 }
 /* ABOUT */
 .about {
-	margin-top: 165px;
-	margin-bottom: 160px;
+	background-color: $grey;
+	padding: 160px 0px;
 	@media(max-width: $r_mob_600) {
-		margin-top: 80px;
+		margin: 80px 0px 50px 0px;
 	}
 	&__title-hidden {
 		display: none;
@@ -909,7 +918,6 @@ body {
 	}
 	&__description {
 		margin-bottom: 60px;
-		padding-left: 10px;
 		&-text {
 			margin: 0px;
 			color: rgba($black, .8);
@@ -953,6 +961,7 @@ body {
 
 /* STAGES-ORDERING */
 .stages-ordering {
+	background-color: $grey;
 	&__title {
 		display: none;
 	}
@@ -1058,6 +1067,16 @@ body {
 
 /* PORTFOLIO */
 .portfolio {
+	&__title {
+		background-color: $grey;
+		padding: 195px 0px 170px 0px;
+		@media(max-width: $r_tab) {
+			padding: 130px 0px 120px 0px;
+		}
+		@media(max-width: $r_mob_500) {
+			padding: 80px 0px;
+		}
+	}
 	&__container {
 		position: relative;
 	}
@@ -1072,12 +1091,6 @@ body {
 		@media(max-width: $r_mob_600) {
 			top: -50px;
 			right: 0%;
-		}
-	}
-	&__title-block {
-		margin: 195px 0px 170px 0px;
-		@media(max-width: $r_tab) {
-			margin-top: 100px;
 		}
 	}
 	&__title {
@@ -1582,6 +1595,7 @@ body {
 		position: absolute;
 		top: 20px;
 		left: -155px;
+		z-index: -20;
 		@media(max-width: $r_desk_1350) {
 			left: 0px;
 		}
@@ -1597,6 +1611,9 @@ body {
 	}
 	&__social {
 		padding-top: 430px;
+		@media(max-width: $r_tab) {
+			padding-top: 360px;
+		}
 	}
 	
 	&__item:nth-child(4) {
@@ -1671,11 +1688,19 @@ body {
 		@media(max-width: $r_tab) {
 			flex-direction: column;
 			align-items: center;
+			gap: 25px;
 		}
 	}
 	&__connect {
-		@media(max-width: $r_tab) {
-			display: block;
+		display: block;
+			@media(max-width: $r_tab) {
+				display: none;
+			}
+		&-mob {
+			display: none;
+			@media(max-width: $r_tab) {
+				display: block;
+			}
 		}
 	}
 	&__tel {
@@ -1699,11 +1724,12 @@ body {
 	&__copy {
 		display: flex;
 		justify-content: space-between;
-		margin-bottom: 40px;
+		margin: 40px 10px;
 		@media(max-width: $r_mob_600) {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			gap: 20px;
 		}
 	}
 	&__copyright {
