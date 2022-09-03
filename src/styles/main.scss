@@ -350,7 +350,7 @@ body {
 	margin-top: 121px;
 	z-index: -60;
 	@media(max-width: $r_mob_500) {
-		margin-top: 90px;
+		margin-top: 80px;
 	}
 }
 .main-block {
@@ -884,12 +884,15 @@ body {
     pointer-events: none;
   }
 }
+
+.sections {
+	background-color: $grey;
+}
 /* ABOUT */
 .about {
-	background-color: $grey;
 	padding: 160px 0px;
 	@media(max-width: $r_mob_600) {
-		margin: 80px 0px 50px 0px;
+		padding: 80px 0px 60px 0px;
 	}
 	&__title-hidden {
 		display: none;
@@ -961,7 +964,6 @@ body {
 
 /* STAGES-ORDERING */
 .stages-ordering {
-	background-color: $grey;
 	&__title {
 		display: none;
 	}
@@ -1067,11 +1069,15 @@ body {
 /* PORTFOLIO */
 .gradient {
 	background-image: linear-gradient(180deg, #E7E6E6 0%, rgba(231, 230, 230, 0) 100%);
+	position: relative;
+	z-index: -60;
 }
 .portfolio {
-	&__title {
+	&__header {
+		position: relative;
+		z-index: -60;
 		background-color: $grey;
-		padding: 30px 0px 30px 0px;
+		padding: 160px 0px 120px 0px;
 		@media(max-width: $r_tab) {
 			padding: 130px 0px 120px 0px;
 		}
@@ -1079,22 +1085,7 @@ body {
 			padding: 80px 0px;
 		}
 	}
-	&__container {
-		position: relative;
-	}
-	&__circle-big {
-		position: absolute;
-		top: -90px;
-		right: 30%;
-		@media(max-width: $r_tab) {
-			top: -50px;
-			right: 30%;
-		}
-		@media(max-width: $r_mob_600) {
-			top: -50px;
-			right: 0%;
-		}
-	}
+	
 	&__title {
 		color: $black;
 		text-transform: uppercase;
@@ -1107,7 +1098,26 @@ body {
 		@media(max-width: $r_mob_500) {
 			font-size: 3.5rem;
 		}
+		&-block {
+			position: relative;
+			z-index: 90;
+		}
 	}
+	&__circle-big {
+		position: absolute;
+		top: 110px;
+		right: 36%;
+		z-index: -20;
+		@media(max-width: $r_tab) {
+			top: 110px;
+			right: 30%;
+		}
+		@media(max-width: $r_mob_600) {
+			top: 60px;
+			right: 2%;
+		}
+	}
+	
 	&__block {
 		margin-bottom: 180px;
 		display: grid;
@@ -1600,6 +1610,15 @@ body {
 		z-index: -20;
 		@media(max-width: $r_desk_1350) {
 			left: 0px;
+			top: -90px;
+		}
+		@media(max-width: $r_tab) {
+			left: 0px;
+			top: -40px;
+		}
+		@media(max-width: $r_tab) {
+			left: 0px;
+			top: 0px;
 		}
 	}
 	&__item {
@@ -1647,6 +1666,9 @@ body {
 		@media(max-width: $r_tab_900) {
 			font-size: 2.4rem;
 		}
+		@media(max-width: $r_mob_500) {
+			max-width: 200px;
+		}
 	}
 	&__text {
 		display: block;
@@ -1661,6 +1683,10 @@ body {
 		@media(max-width: $r_tab_900) {
 			font-size: 2.4rem;
 			max-width: 460px;
+		}
+		@media(max-width: $r_mob_500) {
+			font-size: 2.0rem;
+			max-width: 280px;
 		}
 	}
 	&__form {
