@@ -61,7 +61,7 @@ body {
 	}
 	padding: 40px 0px 50px 0px;
 	@media(max-width: $r_mob_500) {
-		padding: 20px 0px 30px 0px;
+		padding: 27px 7px;
 	}
 	&__container {
 		display: flex;
@@ -345,7 +345,6 @@ body {
 
 // MAIN 
 .page {
-	position: relative;
 	background-color: $grey;
 	margin-top: 121px;
 	z-index: -60;
@@ -522,27 +521,6 @@ body {
 
 .block-figurs {
 	position: relative;
-		&__triangle {
-			width: 66px;
-			height: 72px;
-			background: url('../icons/triangle.svg') 0 0 no-repeat;
-			position: absolute;
-			top: 15px;
-			left: -15px;
-			z-index: 0;
-			@media(max-width: $r_tab) {
-				width: 33px;
-				height: 41px;
-				background: url('../icons/triangle2.svg') 0 0 no-repeat;
-				top: 20px;
-				left: 0px;
-			}
-
-			@media(max-width: $r_mob_500) {
-				top: 90px;
-				left: 25px;
-			}
-		}
 }
 
 .circle {
@@ -609,6 +587,34 @@ body {
 		@media(max-width: $r_mob_500) {
 			width: 40px;
 			height: 40px;
+		}
+	}
+}
+
+.triangle {
+	width: 66px;
+	height: 72px;
+	background: url('../icons/triangle.svg') 0 0 no-repeat;
+	position: absolute;
+	top: 15px;
+	left: -15px;
+	z-index: 0;
+	@media(max-width: $r_tab) {
+		width: 33px;
+		height: 41px;
+		background: url('../icons/triangle2.svg') 0 0 no-repeat;
+		top: 20px;
+		left: 0px;
+	}
+
+	@media(max-width: $r_mob_500) {
+		top: 90px;
+		left: 25px;
+	}
+	&-mob{
+		@media(max-width: $r_mob_500) {
+			top: -30px;
+			left: 70px;
 		}
 	}
 }
@@ -1069,13 +1075,11 @@ body {
 /* PORTFOLIO */
 .gradient {
 	background-image: linear-gradient(180deg, #E7E6E6 0%, rgba(231, 230, 230, 0) 100%);
-	position: relative;
-	z-index: -60;
 }
 .portfolio {
 	&__header {
 		position: relative;
-		z-index: -60;
+		z-index: 0;
 		background-color: $grey;
 		padding: 160px 0px 120px 0px;
 		@media(max-width: $r_tab) {
@@ -1084,6 +1088,11 @@ body {
 		@media(max-width: $r_mob_500) {
 			padding: 80px 0px;
 		}
+	}
+
+	&__container {
+		position: relative;
+		z-index: 20;
 	}
 	
 	&__title {
@@ -1107,7 +1116,7 @@ body {
 		position: absolute;
 		top: 110px;
 		right: 36%;
-		z-index: -20;
+		z-index: 0;
 		@media(max-width: $r_tab) {
 			top: 110px;
 			right: 30%;
@@ -1192,6 +1201,8 @@ body {
 
 /* -- ДОПОЛНИТЕЛЬНЫЕ НАВЫКИ СЕКЦИЯ №4-- */
 .extraskills {
+	position: relative;
+	z-index: 20;
 	margin-bottom: 140px;
 	@media(max-width: $r_tab) {
 		margin-bottom: 100px;
@@ -1203,6 +1214,7 @@ body {
 	&__title-hidden {
 		display: none;
 	}
+	
 	&__description {
 		border-bottom: 1px solid $black;
 		padding: 15px 10px 80px 0px;
@@ -1404,6 +1416,8 @@ body {
 /* -- МОИ ЦЕНЫ СЕКЦИЯ №6-- */
 
 .price {
+	position: relative;
+	z-index: 20;
 	margin-bottom: 100px;
 	@media(max-width: $r_tab) {
 		margin-bottom: 60px;
@@ -1590,6 +1604,8 @@ body {
 
 /* -- ОБРАТНАЯ СВЯЗЬ СЕКЦИЯ №7-- */
 .feedback {
+	position: relative;
+	z-index: 20;
 	margin-bottom: 60px;
 	@media(max-width: $r_mob_500) {
 		margin-bottom: 43px;
@@ -1709,6 +1725,8 @@ body {
 
 /* -- FOOTER -- */
 .footer {
+	position: relative;
+	z-index: 20;
 	&__navigation {
 		display: flex;
 		justify-content: space-between;

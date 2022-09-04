@@ -156,7 +156,7 @@
 						<div class="main-block__circle-small circle-small"></div><!--Круг малый-->
 						<div class="main-block__figurs">
 							<div class="block-figurs">
-								<div class="block-figurs__triangle"></div><!--Трегольник-->
+								<div class="triangle"></div><!--Трегольник-->
 								<div class="circle"></div><!--Круг средний-->
 							</div>
 						</div>
@@ -588,7 +588,7 @@
 					<div class="feedback__grid">
 						<div class="feedback__figure">
 							<div class="block-figurs">
-								<div class="block-figurs__triangle-tab"></div><!--Трегольник-->
+								<div class="triangle triangle-mob"></div><!--Трегольник-->
 								<div class="circle"></div><!--Круг средний-->
 							</div>
 						</div>
@@ -787,16 +787,16 @@ document.querySelector(href).scrollIntoView({
 
 	function OpenMessenger() {
 		document.getElementById('discussproject').style.top = '0px';
-		document.getElementById("discussproject").style.display = 'block';
+		document.getElementById('discussproject').style.display = 'block';
 		document.body.style.background = 'rgba(1, 1, 1, 0.5)'; 
 		document.body.style.overflow = 'hidden'; 
 	}
 
-		function CloseMessenger() {
+	function CloseMessenger() {
 			document.getElementById('discussproject').style.top = '-2000px';
 			document.body.style.background = ''; 
 			document.body.style.overflow = '';
-		}
+	}
 	</script>
 </body>
 </html>
