@@ -184,6 +184,9 @@ body {
 	&__header {
 		height: 80px;
 		border-bottom: 1px solid $black;
+		@media(max-width: $r_mob_600) {
+			height: 60px;
+		}
 	}
 
 	&__connect {
@@ -209,6 +212,13 @@ body {
 		padding: 20px 0px;
 		text-align: center;
 		width: 100%;
+		@media(max-width: $r_mob_600) {
+			padding: 10px 0px;
+			max-width: 320px;
+		}
+		@media(max-width: $r_mob_500) {
+			padding: 5px 0px;
+		}
 	}
 
 	&__link {
@@ -219,6 +229,12 @@ body {
 		transition: .3s;
 		&:hover {
 			color: $red;
+		}
+		@media(max-width: $r_mob_600) {
+			font-size: 2.2rem;
+		}
+		@media(max-width: $r_mob_500) {
+			font-size: 2.0rem;
 		}
 	}
 
