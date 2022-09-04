@@ -1309,14 +1309,18 @@ body {
 	&__item {
 		border: 1px solid #000;
 		text-align: center;
-		padding: 30px 10px;
+		width: 286px;
+		height: 146px;
 		@media(max-width: $r_mob_500) {
-			padding: 20px 10px;
-		}
-		@media(max-width: $r_mob_360) {
-			padding: 10px 10px;
+			height: 86px;
 		}
 	}
+}
+
+ .tooltip {
+	padding: 0px 5px;
+	position: relative;
+	display: inline-block;
 	&__icons {
 		max-width: 105px;
 		width: 100%;
@@ -1326,14 +1330,6 @@ body {
 			filter: grayscale(0);
 		}
 	}
-}
-
-.tooltip {
-	position: relative;
-	display: inline-block;
- }
-
- .tooltip {
 	&__content {
 		visibility: hidden;
 		width: 232px;
@@ -1383,6 +1379,9 @@ body {
 	
 	&:hover &__content {
 		visibility: visible;
+		@media(max-width: $r_mob_500) {
+			visibility: hidden;
+		}
 	}
  }
 
