@@ -1203,6 +1203,7 @@ body {
 		border-bottom: 1px solid $black;
 	}
 	&__cover  {
+		width: 100%;
 		border-bottom: 1px solid $black;
 		padding: 45px 10px 60px 10px;
 	}
@@ -1365,7 +1366,7 @@ body {
 			width: 130px;
 		}
   
-		/* Position the tooltip text - see examples below! */
+		/* Поместите текст подсказки - см. примеры ниже! */
 	   position: absolute;
 		top: 90px;
 		right: -92px;
