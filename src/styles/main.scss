@@ -1345,8 +1345,10 @@ body {
 		max-width: 105px;
 		width: 100%;
 		object-fit: cover;
+		opacity: .3;
 		filter: grayscale(1);
 		&:hover {
+			opacity: 1;
 			filter: grayscale(0);
 		}
 	}
