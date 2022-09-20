@@ -631,12 +631,12 @@
 									<h3 class="messenger__label">Почта</h3>
 									<input type = "email" name = "email" placeholder = "Введите ваш email" class = "messenger__call"/>
 									<h3 class="messenger__label">Выберите удобный способ связи</h3>
-									<label class="drop">
-										<input type="checkbox" id="target-drop-example"> <!-- Toggle Drop -->
-										<span class="control">Telegram</span> <!-- Fake button -->
+									<div class="drop">
+									<input type="checkbox" id="target-drop-example"> <!-- Toggle Drop -->
+									<span class="control">Telegram</span> <!-- Fake button -->
 				
 										<!-- Items -->
-										<ul class="drop-items" id = "itemsgrey">
+										<ul id = "itemsgrey" class="drop-items">
 											<li class="item-drop">
 												<a target="_blank" href="#">WhatsApp </a>
 											</li>
@@ -655,7 +655,7 @@
 										</div>
 										<!-- Alternative to close dropdown with click out -->
 										<label for="target-drop-example" class="overlay-close"></label>
-									</label>   
+									</div>   
 									<!-- END Dropdown -->
 								</form>
 							</div>
@@ -722,7 +722,7 @@
 					<h3 class="messenger__label">Почта</h3>
 					<input type = "email" name = "email" placeholder = "Введите ваш email" class = "messenger__call"/>
 					<h3 class="messenger__label">Выберите удобный способ связи</h3>
-					<label class="drop">
+					<div class="drop">
 						<input type="checkbox" id="target-drop-example"> <!-- Toggle Drop -->
 						<span class="control">Telegram</span> <!-- Fake button -->
 
@@ -746,7 +746,7 @@
 						</div>
 						<!-- Alternative to close dropdown with click out -->
 						<label for="target-drop-example" class="overlay-close"></label>
-					</label>   
+					</div>   
 					<!-- END Dropdown -->
 				</form>
 				<button class="messenger__close" onclick = "CloseMessenger()"></button>
