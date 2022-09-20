@@ -439,7 +439,7 @@ body {
 			font-size: 4.4rem;
 		}
 		@media(max-width: $r_mob_400) {
-			font-size: 3.5rem;
+			font-size: 3.2rem;
 		}
 	}
 
@@ -626,9 +626,21 @@ body {
 		left: 0px;
 	}
 
+	@media(max-width: $r_desk_1350) {
+		top: 160px;
+		left: 170px;
+	}
+	@media(max-width: $r_tab) {
+		top: 45px;
+		left: 130px;
+	}
+	@media(max-width: $r_mob_600) {
+		top: 90px;
+		left: 110px;
+	}
 	@media(max-width: $r_mob_500) {
 		top: 90px;
-		left: 25px;
+		left: 15px;
 	}
 	&-mob{
 		@media(max-width: $r_mob_500) {
@@ -782,7 +794,7 @@ body {
 		z-index: 0;
 		transition: .3s;
 		&:hover {
-			background-color: rgba($red, .5);
+			background-color: #EA0E00;
 			cursor: pointer;
 		}
 		@media(max-width: $r_mob_600) {
@@ -1093,7 +1105,7 @@ body {
 
 /* PORTFOLIO */
 .gradient {
-	background-image: linear-gradient(180deg, #E7E6E6 0%, rgba(231, 230, 230, 0) 100%);
+	background-image: linear-gradient(180deg, #E7E6E6 0%, #F3F2F0 100%);
 }
 .portfolio {
 	&__header {
@@ -1221,9 +1233,11 @@ body {
 
 /* -- ДОПОЛНИТЕЛЬНЫЕ НАВЫКИ СЕКЦИЯ №4-- */
 .extraskills {
+	background-color: $grey;
 	position: relative;
-	z-index: 20;
-	margin-bottom: 140px;
+	z-index: 60;
+	padding: 170px 0px 140px 0px;
+	margin-top: -180px;
 	@media(max-width: $r_tab) {
 		margin-bottom: 100px;
 	}
@@ -1311,7 +1325,8 @@ body {
 
 /* -- МОИ ИНСТРУМЕНТЫ СЕКЦИЯ №5-- */
 .tool {
-	margin: 0px 5px 120px 5px;
+	background-color: $grey;
+	padding: 0px 5px 120px 5px;
 	@media(max-width: $r_tab) {
 		margin: 0px 5px 100px 5px;
 	}
@@ -1407,18 +1422,34 @@ body {
 	}
  }
 
- .php {
-	top: 65px;
-	right: -78px;
+ .html {
+	top: 95px;
+	right: -88px;
 	@media(max-width: $r_tab) {
 		right: -42px;
 	}
  }
 
  .css {
-	right: -88px;
+	right: -84px;
 	@media(max-width: $r_tab) {
 		right: -52px;
+	}
+ }
+
+ .php {
+	top: 67px;
+	right: -75px;
+	@media(max-width: $r_tab) {
+		right: -42px;
+	}
+ }
+
+ .vuejs {
+	top: 80px;
+	right: -86px;
+	@media(max-width: $r_tab) {
+		right: -42px;
 	}
  }
 
@@ -1437,9 +1468,10 @@ body {
 /* -- МОИ ЦЕНЫ СЕКЦИЯ №6-- */
 
 .price {
+	background-color: $grey;
 	position: relative;
 	z-index: 20;
-	margin-bottom: 100px;
+	padding-bottom: 100px;
 	@media(max-width: $r_tab) {
 		margin-bottom: 60px;
 	}
@@ -1622,10 +1654,10 @@ body {
 
 /* -- ОБРАТНАЯ СВЯЗЬ СЕКЦИЯ №7-- */
 .feedback {
+	background-color: $grey;
 	position: relative;
 	z-index: 20;
-	padding-top: 60px;
-	margin-bottom: 60px;
+	padding: 60px 0px;
 	@media(max-width: $r_mob_500) {
 		margin-bottom: 43px;
 	}
@@ -1663,7 +1695,7 @@ body {
 	
 	&__item {
 		border-bottom: 1px solid $black;
-		padding-top: 10px;
+		padding-top: 0px;
 	}
 
 	&__item:nth-child(1) {
@@ -1673,6 +1705,7 @@ body {
 	}
 
 	&__item:nth-child(3) {
+		border-bottom: none;
 		@media(max-width: $r_tab_900) {
 			order: 4;
 			padding-bottom: 20px;
@@ -1683,8 +1716,9 @@ body {
 	}
 
 	&__item:nth-child(4) {
+		border-bottom: none;
+		padding-top: 50px;
 		@media(max-width: $r_tab_900) {
-			border-bottom: none;
 			order: 3;
 			display: flex;
 			justify-content: center;
@@ -1692,7 +1726,8 @@ body {
 	}
 	
 	&__social {
-		padding-top: 370px;
+		margin-left: -40px;
+		padding-top: 420px;
 		@media(max-width: $r_tab) {
 			padding-top: 360px;
 		}
@@ -1738,6 +1773,8 @@ body {
 
 /* -- FOOTER -- */
 .footer {
+	background-color: $grey;
+	padding-bottom: 40px;
 	position: relative;
 	z-index: 20;
 	&__navigation {
@@ -1749,6 +1786,10 @@ body {
 			align-items: center;
 			gap: 25px;
 		}
+	}
+	&__container {
+		padding-top: 60px;
+		border-top: 1px solid $black;
 	}
 	&__connect {
 		display: block;
@@ -1783,7 +1824,7 @@ body {
 	&__copy {
 		display: flex;
 		justify-content: space-between;
-		margin: 40px 10px;
+		margin: 40px 0px;
 		@media(max-width: $r_mob_600) {
 			display: flex;
 			flex-direction: column;
