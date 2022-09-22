@@ -1355,10 +1355,26 @@ body {
 	}
 }
 
- .tooltip {
-	padding: 0px 5px;
+.tooltip {
 	position: relative;
+	padding: 0px 5px;
 	display: inline-block;
+	&__title {
+		font-size: 10px;
+		font-weight: 500;
+	}
+	&__text {
+		display: block;
+		font-size: 10px;
+		font-weight: 500;
+		width: 202px;
+		@media(max-width: $r_tab) {
+			width: 140px;
+		}
+		@media(max-width: $r_mob_500) {
+			width: 100px;
+		}
+	}
 	&__icons {
 		max-width: 105px;
 		width: 100%;
@@ -1373,6 +1389,7 @@ body {
 	&__content {
 		visibility: hidden;
 		width: 232px;
+	   height: 0%;
 		background-color: $red;
 		color: $white;
 		text-align: center;
@@ -1395,29 +1412,14 @@ body {
 			right: -57px;
 		}
 		z-index: 1;
-		transition: .3s;
-		&:hover {
+		&:hover .tooltip__content {
 			visibility: visible;
 		}
-		&__title {
-			font-size: 10px;
-			font-weight: 500;
-		}
-		&__text {
-			display: block;
-			font-size: 10px;
-			font-weight: 500;
-			width: 202px;
-			@media(max-width: $r_tab) {
-				width: 140px;
-			}
-			@media(max-width: $r_mob_500) {
-				width: 100px;
-			}
-		}
+		transition: .3s;
 	}
 	
 	&:hover &__content {
+		height: 100%;
 		visibility: visible;
 		@media(max-width: $r_mob_500) {
 			visibility: hidden;
@@ -1426,15 +1428,14 @@ body {
  }
 
  .html {
-	top: 95px;
-	right: -88px;
+	right: -87px;
 	@media(max-width: $r_tab) {
-		right: -42px;
+		right: -52px;
 	}
  }
 
  .css {
-	right: -84px;
+	right: -85px;
 	@media(max-width: $r_tab) {
 		right: -52px;
 	}
@@ -1463,7 +1464,7 @@ body {
   		bottom: 100%;  /* At the top of the tooltip */
    	left: 50%;
   		margin-left: -5px;
-  		 border-width: 5px;
+  		border-width: 5px;
 		border-style: solid;
 		border-color: transparent transparent $red transparent;
 }
