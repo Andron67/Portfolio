@@ -627,36 +627,25 @@
 							<div class="feedback__form-block">
 								<form action="#" method = "post" class="messenger__form">
 									<h3 class="messenger__label">Телефон</h3>
-									<input type="tel" name = "userphone" placeholder = "Введите ваш телефон" class = "messenger__call" />
+									<input type="tel" name = "userphone" placeholder = "Введите ваш телефон" class = "messenger__call feedback-call" />
 									<h3 class="messenger__label">Почта</h3>
-									<input type = "email" name = "email" placeholder = "Введите ваш email" class = "messenger__call"/>
+									<input type = "email" name = "email" placeholder = "Введите ваш email" class = "messenger__call feedback-call"/>
 									<h3 class="messenger__label">Выберите удобный способ связи</h3>
-									<div class="drop">
-									<input type="checkbox" id="target-drop-example"> <!-- Toggle Drop -->
-									<span class="control">Telegram</span> <!-- Fake button -->
-				
-										<!-- Items -->
-										<ul id = "itemsgrey" class="drop-items">
-											<li class="item-drop">
-												<a target="_blank" href="#">WhatsApp </a>
-											</li>
-											<li class="item-drop">
-												<a target="_blank" href="#">Viber</a>
-											</li>
-											<li class="item-drop">
-												<a target="_blank" href="#">Звонок на телефон</a>
-											</li>
-											<li class="item-drop">
-												<a target="_blank" href="#">SMS сообщение</a>
-											</li>
+									<!-- Dropdown -->
+									<div class="dropdown-container">
+										<input type="checkbox" id="feedbackdrop" />
+										<label for="feedbackdrop">Telegram</label>
+										<ul class="content">
+										  <li>WhatsApp</li>
+										  <li>Viber</li>
+										  <li>Звонок на телефон</li>
+										  <li>SMS сообщение</li>           
 										</ul>
-										<div class = "messenger__button">
-											<button type = "submit" class="messenger__btn">Отправить</button>
-										</div>
-										<!-- Alternative to close dropdown with click out -->
-										<label for="target-drop-example" class="overlay-close"></label>
-									</div>   
+									</div>
 									<!-- END Dropdown -->
+									<div class = "messenger__button">
+										<button type = "submit" class="messenger__btn">Отправить</button>
+									</div>  
 								</form>
 							</div>
 						</div>
@@ -722,32 +711,21 @@
 					<h3 class="messenger__label">Почта</h3>
 					<input type = "email" name = "email" placeholder = "Введите ваш email" class = "messenger__call"/>
 					<h3 class="messenger__label">Выберите удобный способ связи</h3>
-					<label class="drop">
-						<input type="checkbox" id="target-drop-example"> <!-- Toggle Drop -->
-						<span class="control">Telegram</span> <!-- Fake button -->
-
-						<!-- Items -->
-						<ul class="drop-items" id = "itemsgrey">
-							<li class="item-drop">
-								<a target="_blank" href="#">WhatsApp </a>
-							</li>
-							<li class="item-drop">
-								<a target="_blank" href="#">Viber</a>
-							</li>
-							<li class="item-drop">
-								<a target="_blank" href="#">Звонок на телефон</a>
-							</li>
-							<li class="item-drop">
-								<a target="_blank" href="#">SMS сообщение</a>
-							</li>
+					<!-- Dropdown --> 
+					<div class="dropdown-container">
+						<input type="checkbox" id="drop" />
+						<label for="drop">Telegram</label>
+						<ul class="content">
+						  <li>WhatsApp</li>
+						  <li>Viber</li>
+						  <li>Звонок на телефон</li>
+						  <li>SMS сообщение</li>           
 						</ul>
-						<div class = "messenger__button">
-							<button type = "submit" class="messenger__btn">Отправить</button>
-						</div>
-						<!-- Alternative to close dropdown with click out -->
-						<label for="target-drop-example" class="overlay-close"></label>
-					</label>   
+					</div>
 					<!-- END Dropdown -->
+					<div class = "messenger__button">
+						<button type = "submit" class="messenger__btn">Отправить</button>
+					</div>
 				</form>
 				<button class="messenger__close" onclick = "CloseMessenger()"></button>
 			</div>
