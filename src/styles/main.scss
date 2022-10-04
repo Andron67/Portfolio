@@ -44,6 +44,10 @@ body {
 	margin: 0px auto;
 	padding: 0px 15px;
 	box-sizing: content-box;
+	@media(max-width: $r_desk_1280) {
+		max-width: 980px;
+		width: 100%;
+	}
 	@media(max-width: $r_tab_900) {
 		padding: 0px 5px;
 	}
@@ -337,7 +341,7 @@ body {
 }
 
 .description {
-	max-width: 238px;
+	width: 238px;
 	&-title {
 		color: $black;
 		font-size: 1.6rem;
@@ -349,8 +353,25 @@ body {
 		color: rgba($black, .8);
 		font-size: 1.4rem;
 		line-height: 1.5;
+		@media(max-width: $r_mob_500) {
+			font-size: 1.2rem;
+		}
+		@media(max-width: $r_mob_360) {
+			font-size: 1.1rem;
+		}
+	}
+	&:nth-child(2n) {
+		@media(max-width: $r_mob_500) {
+			width: 150px;
+		}
+	}
+	&:nth-child(2n+1) {
+		@media(max-width: $r_mob_500) {
+			width: 140px;
+		}
 	}
 }
+
 
 .text {
 	color: $black;
@@ -449,12 +470,15 @@ body {
 		border-bottom: 1px solid $black;
 		align-items: center;
 		justify-content: space-between;
+		@media(max-width: $r_tab) {
+			padding-right: 15px;
+		}
 	}
 
 	&__button-block {
 		display: flex;
 		justify-content: flex-start;
-		padding: 0px 0px 0px 0px;
+		padding: 0px;
 		position: relative;
 		width: 170px; 
 		@media(max-width: $r_mob_500) {
@@ -516,7 +540,13 @@ body {
 			grid-template-columns: repeat(2, 1fr);
 			gap: 10px;
 		}
+		@media(max-width: $r_mob_500) {
+			grid-template-columns: 150px 170px;
+			gap: 0px;
+		}
 	}
+
+
 	&__circle-small {
 		position: absolute;
 		bottom: 20px;
@@ -1000,6 +1030,10 @@ body {
 			grid-template-columns: repeat(2, 1fr);
 			gap: 10px;
 		}
+		@media(max-width: $r_mob_500) {
+			grid-template-rows: 110px 110px;
+			gap: 0px;
+		}
 	}
 	&__description-bottom {
 		padding-top: 50px;
@@ -1008,6 +1042,18 @@ body {
 		@media(max-width: $r_desk_hd) {
 			max-width: 560px;
 			width: 100%;
+		}
+		@media(max-width: $r_desk) {
+			max-width: 360px;
+		}
+		@media(max-width: $r_tab) {
+			max-width: 300px;
+		}
+		@media(max-width: $r_mob_500) {
+			max-width: 150px;
+		}
+		@media(max-width: $r_mob_500) {
+			max-width: 128px;
 		}
 	}
 }
@@ -1527,28 +1573,27 @@ body {
 	}
 	&__circle-litlefirst {
 		position: absolute;
-		bottom: 50px;
-		right: 90%;
+		bottom: 40px;
+		right: 92%;
 		@media(max-width: $r_tab) {
-			bottom: 50px;
-			right: 83%;
+			bottom: 35px;
+			right: 90%;
 		}
 		@media(max-width: $r_mob_500) {
-			bottom: 75px;
-			  right: 85%;
+			bottom: 58px;
+			right: 90%;
 		}
 	}
 	&__circle-litlesecond {
 		position: absolute;
-		bottom: 50px;
-		right: 90%;
+		bottom: 40px;
+		right: 92%;
 		@media(max-width: $r_tab) {
-			bottom: 40px;
-			  right: 85%;
+			bottom: 35px;
+			  right: 90%;
 		}
 		@media(max-width: $r_mob_500) {
-			bottom: 55px;
-			  right: 85%;
+			bottom: 58px;
 		}
 	}
 	&__title {
