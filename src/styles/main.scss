@@ -88,10 +88,10 @@ body {
 			gap: 10px;
 		}
 		@media(max-width: $r_mob_500) {
-			gap: 4px;
+			gap: 8px;
 		}
 		@media(max-width: $r_mob_400) {
-			gap: 3px;
+			gap: 6px;
 		}
 	}
 
@@ -1228,7 +1228,7 @@ body {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		@media(max-width: $r_tab) {
-			margin-bottom: 110px;
+			padding-bottom: 110px;
 		}
 		@media(max-width: $r_mob_600) {
 			grid-template-columns:  repeat(1, 1fr);
@@ -1311,13 +1311,10 @@ body {
 	background-color: $grey;
 	position: relative;
 	z-index: 60;
-	padding: 170px 0px 140px 0px;
+	padding: 0px 0px 140px 0px;
 	margin-top: -180px;
 	@media(max-width: $r_tab) {
 		margin-bottom: 0px;
-	}
-	@media(max-width: $r_mob_500) {
-		padding: 80px 0px;
 	}
 
 	&__title-hidden {
@@ -1346,6 +1343,9 @@ body {
 			}
 			@media(max-width: $r_mob_500) {
 				font-size: 2.0rem;
+			}
+			@media(max-width: $r_mob_400) {
+				max-width: 320px;
 			}
 		}
 	}
