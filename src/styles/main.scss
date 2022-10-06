@@ -88,7 +88,10 @@ body {
 			gap: 10px;
 		}
 		@media(max-width: $r_mob_500) {
-			gap: 2px;
+			gap: 4px;
+		}
+		@media(max-width: $r_mob_400) {
+			gap: 3px;
 		}
 	}
 
@@ -108,6 +111,9 @@ body {
 		transition: .3s;
 		&:hover {
 			color: $red;
+		}
+		@media(max-width: $r_mob_400) {
+			font-size: 1.2rem;
 		}
 	}
 
@@ -383,7 +389,7 @@ body {
 // MAIN 
 .page {
 	background-color: $grey;
-	margin-top: 121px;
+	padding-top: 121px;
 	z-index: -60;
 	@media(max-width: $r_mob_500) {
 		margin-top: 80px;
@@ -520,8 +526,8 @@ body {
 		&::after {
 			content: '';
 			background: url('../icons/arrow.svg');
-			width: 15px;
-			height: 10px;
+			width: 16px;
+			height: 12px;
 			position: absolute;
 			top: 5px;
 			right: 0px;
@@ -1225,8 +1231,7 @@ body {
 			margin-bottom: 110px;
 		}
 		@media(max-width: $r_mob_600) {
-			grid-template-columns: repeat(1, 1fr);
-			margin-bottom: 80px;
+			grid-template-columns:  repeat(1, 1fr);
 		}
 	}
 	&__content {
@@ -1274,22 +1279,30 @@ body {
 		border-bottom: 1px solid $black;
 	}
 	&__cover  {
-		width: 100%;
+		padding: 20px 20px;
+		height: 315px;
+		width: 90%;
 		border-bottom: 1px solid $black;
-		padding: 45px 10px 60px 10px;
-		@media(max-width: $r_mob_500) {
-			padding: 20px 0px 70px 0px;
+		position: relative;
+		@media(max-width: $r_tab) {
+			padding: 0px 10px;
 		}
+	}
+	&__image {
+		position: absolute;
+		max-width: 560px;
+		width: 100%;
+		height: 100%;
+		top: 0px;
+		left: 0px;
+		object-fit: contain;
+		max-width: 560px;
+		width: 100%;
 	}
 	&__content {
 		@media(max-width: $r_mob_600) {
 			border-bottom: none;
 		}
-	}
-
-	&__image {
-		max-width: 560px;
-		width: 100%;
 	}
 }
 
@@ -1304,7 +1317,7 @@ body {
 		margin-bottom: 0px;
 	}
 	@media(max-width: $r_mob_500) {
-		margin-bottom: 0px;
+		padding: 80px 0px;
 	}
 
 	&__title-hidden {
@@ -1662,7 +1675,7 @@ body {
 			font-weight: 400;
 			line-height: 1.5;
 			@media(max-width: $r_mob_500) {
-				font-size: 1.4rem;
+				font-size: 1.3rem;
 				line-height: 1.2;
 			}
 		}
@@ -1697,7 +1710,7 @@ body {
 		flex-direction: column;
 		height: 230px;
 		height: 100%;
-		max-width: 387px;
+		max-width: 450px;
 		width: 100%;
 		@media(max-width: $r_tab) {
 			width: 350px;
