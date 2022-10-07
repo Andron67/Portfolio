@@ -392,7 +392,7 @@ body {
 	padding-top: 121px;
 	z-index: -60;
 	@media(max-width: $r_mob_500) {
-		margin-top: 80px;
+		padding-top: 80px;
 	}
 }
 .main-block {
@@ -906,8 +906,9 @@ body {
 	}
 	label {
 	  position: relative;
-	  padding-left: 10px;
+	  padding: 15px 10px 15px 10px;
 	  display: inline-block;
+	  width: 100%;
 	  font-size: 1.2rem;
 	  cursor: pointer;
 	  color: $black;
