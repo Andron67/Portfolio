@@ -1316,7 +1316,7 @@ body {
 	@media(max-width: $r_tab) {
 		margin-bottom: 0px;
 	}
-
+	
 	&__title-hidden {
 		display: none;
 	}
@@ -1417,6 +1417,7 @@ body {
 		border-collapse: collapse;
 	}
 	&__item {
+		position: relative;
 		border: 1px solid #000;
 		text-align: center;
 		width: 286px;
@@ -1425,17 +1426,46 @@ body {
 			height: 86px;
 		}
 	}
+	&__icons {
+		max-width: 90px;
+		width: 100%;
+		object-fit: cover;
+		opacity: .3;
+		filter: grayscale(1);
+		&:hover {
+		opacity: 1;
+		filter: grayscale(0);
+		}
+		@media(max-width: $r_mob_600) {
+			max-width: 45px;
+		}
+	}
 }
 
-.tooltip {
-	position: relative;
-	padding: 0px 5px;
-	display: inline-block;
-	&__title {
+
+
+.tooltip__content {
+	background-color: $red;
+	color: #fff;
+	text-align: center;
+	visibility: hidden;
+	height: 0%;
+	width: 0%;
+	padding: 27px 15px;
+	position: absolute;
+	top: 130px;
+	right: 0px;
+	left: 0px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	z-index: 70;
+	width: calc(100% - 20px);
+	transition: .3s;
+	&-title {
 		font-size: 10px;
 		font-weight: 500;
 	}
-	&__text {
+	&-text {
 		display: block;
 		font-size: 10px;
 		font-weight: 500;
@@ -1447,103 +1477,29 @@ body {
 			width: 100px;
 		}
 	}
-	&__icons {
-		max-width: 105px;
-		width: 100%;
-		object-fit: cover;
-		opacity: .3;
-		filter: grayscale(1);
-		&:hover {
-			opacity: 1;
-			filter: grayscale(0);
-		}
-		@media(max-width: $r_mob_600) {
-			max-width: 45px;
-		}
-	}
-	&__content {
+ }
+ 
+ // треугольник указатель
+ .tooltip__content::after {
+	content: "";
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent $red transparent;
+ }
+ 
+ .tool__item:hover .tooltip__content {
+	width: 100%;
+	height: 100%;
+	visibility: visible;
+	@media(max-width: $r_mob_500) {
 		visibility: hidden;
-		width: 232px;
-	   height: 0%;
-		background-color: $red;
-		color: $white;
-		text-align: center;
-		padding: 27px 15px;
-		@media(max-width: $r_tab) {
-			padding: 15px 10px;
-			width: 170px;
-		}
-		@media(max-width: $r_mob_500) {
-			padding: 10px 5px;
-			width: 130px;
-		}
-  
-		/* Поместите текст подсказки - см. примеры ниже! */
-	   position: absolute;
-		top: 90px;
-		right: -92px;
-		@media(max-width: $r_tab) {
-			top: 90px;
-			right: -57px;
-		}
-		z-index: 1;
-		&:hover .tooltip__content {
-			visibility: visible;
-		}
-		transition: .3s;
-	}
-	
-	&:hover &__content {
-		height: 100%;
-		visibility: visible;
-		@media(max-width: $r_mob_500) {
-			visibility: hidden;
-		}
 	}
  }
-
- .html {
-	right: -87px;
-	@media(max-width: $r_tab) {
-		right: -52px;
-	}
- }
-
- .css {
-	right: -85px;
-	@media(max-width: $r_tab) {
-		right: -47px;
-	}
- }
-
- .php {
-	top: 67px;
-	right: -75px;
-	@media(max-width: $r_tab) {
-		right: -40px;
-	}
- }
-
- .vuejs {
-	top: 80px;
-	right: -86px;
-	@media(max-width: $r_tab) {
-		right: -50px;
-	}
- }
-
- /* Tooltip text */
- .tooltip .tooltip__content::after {
-		content: " ";
- 		position: absolute;
-  		bottom: 100%;  /* At the top of the tooltip */
-   	left: 50%;
-  		margin-left: -5px;
-  		border-width: 5px;
-		border-style: solid;
-		border-color: transparent transparent $red transparent;
-}
-
+ 
 /* -- МОИ ЦЕНЫ СЕКЦИЯ №6-- */
 
 .price {
