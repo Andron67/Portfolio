@@ -1432,21 +1432,19 @@ body {
 		object-fit: cover;
 		opacity: .3;
 		filter: grayscale(1);
-		&:hover {
-		opacity: 1;
-		filter: grayscale(0);
-		}
 		@media(max-width: $r_mob_600) {
 			max-width: 45px;
 		}
 	}
+	&__item:hover &__icons {
+		opacity: 1;
+		filter: grayscale(0);
+	}
 }
-
-
 
 .tooltip__content {
 	background-color: $red;
-	color: #fff;
+	color: $white;
 	text-align: center;
 	visibility: hidden;
 	height: 0%;
@@ -1461,6 +1459,9 @@ body {
 	z-index: 70;
 	width: calc(100% - 20px);
 	transition: .3s;
+	@media(max-width: $r_mob_600) {
+		padding: 5px;
+	}
 	&-title {
 		font-size: 10px;
 		font-weight: 500;
@@ -1469,16 +1470,9 @@ body {
 		display: block;
 		font-size: 10px;
 		font-weight: 500;
-		width: 202px;
-		@media(max-width: $r_tab) {
-			width: 140px;
-		}
-		@media(max-width: $r_mob_500) {
-			width: 100px;
-		}
 	}
  }
- 
+
  // треугольник указатель
  .tooltip__content::after {
 	content: "";
