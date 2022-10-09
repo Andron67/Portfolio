@@ -922,8 +922,7 @@ body {
 		 position: absolute;
 		 width: 40px;
 		 font-size: 32px;
-		 left: 520px;
-		 padding-left: 0px;
+		 right: 0px;
 		 top: 20px;
 		 bottom: 0;
 		 transform: rotate(90deg);
@@ -948,7 +947,7 @@ body {
 	  position: absolute;
 	  top: 50px;
 	  z-index: 999; 
-	  background: $grey;
+	  background: #f2f2f2;
 	  li {
 		 font-size: 1.2rem;
 		 color: rgba($black, .4);
