@@ -1413,7 +1413,8 @@ body {
 		padding: 0px 5px 90px 5px;
 	}
 	&__title-hidden {
-		display: none;
+		margin-top: -17px;
+		visibility: hidden;
 	}
 	&__table {
 		width: 100%;
@@ -1448,7 +1449,7 @@ body {
 
 .tooltip__content {
 	background-color: $red;
-	color: $white;
+	color: rgba($white, .05);
 	text-align: center;
 	visibility: hidden;
 	height: 0%;
@@ -1461,8 +1462,7 @@ body {
 	margin: 0 auto;
 	box-sizing: border-box;
 	z-index: 70;
-	width: calc(100% - 20px);
-	transition: .3s;
+	transition: .3s linear;
 	@media(max-width: $r_mob_600) {
 		padding: 5px;
 	}
@@ -1477,6 +1477,9 @@ body {
 	}
  }
 
+ .css3 {
+	right: 10px;
+ }
  // треугольник указатель
  .tooltip__content::after {
 	content: "";
@@ -1490,7 +1493,8 @@ body {
  }
  
  .tool__item:hover .tooltip__content {
-	width: 100%;
+	color: $white;
+	width: calc(100% - 20px);
 	height: 100%;
 	visibility: visible;
 	@media(max-width: $r_mob_500) {
