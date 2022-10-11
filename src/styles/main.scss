@@ -957,7 +957,8 @@ body {
 		 &:last-child { padding-bottom: 10px; } 
 		 transition: .3s; 
 		 &:hover {
-			 color: $black;
+			cursor: pointer;
+			color: $black;
 		 }    
 	  }
 	}
