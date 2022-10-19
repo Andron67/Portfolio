@@ -34,9 +34,6 @@ body {
 	font-weight: 400;
 }
 
-.wrapper {
-	overflow: hidden;
-}
 
 .__container {
 	max-width: 1140px;
@@ -44,6 +41,7 @@ body {
 	margin: 0px auto;
 	padding: 0px 15px;
 	box-sizing: content-box;
+	overflow: hidden;
 	@media(max-width: $r_desk_1280) {
 		max-width: 980px;
 		width: 100%;
@@ -822,7 +820,7 @@ body {
 	&__form {
 		margin: 0px auto;
 		max-width: 560px;
-		width: 100%;
+		width: calc(100% - 10px);
 		@media(max-width: $r_mob_500) {
 			max-width: 340px;
 			width: 100%;
@@ -833,27 +831,14 @@ body {
 		border: none;
 		background-color: rgba($black, .05);
 		display: block;
-		max-width: 500px;
-		padding: 24px 20px;
-		width: 100%;
-		@media(max-width: $r_mob_600) {
-			max-width: 460px;
-			padding: 20px 10px;
-		}
-		@media(max-width: $r_mob_500) {
-			max-width: 310px;
-			width: 100%;
-		}
-		@media(max-width: $r_mob_400) {
-			max-width: 265px;
-			width: 100%;
-		}
+		padding: 24px 0px 24px 20px;
+		width: calc(100% - 20px);
 	}
 
 	&__label {
 		display: block;
 		margin-bottom: 10px;
-		padding: 0px;
+		padding-left: 20px;
 		font-size: 1.2rem;
 		font-weight: 400;
 	}
@@ -865,7 +850,6 @@ body {
 		align-items: center;
 		background-color: $red;
 		margin-top: 40px;
-		max-width: 540px;
 		width: 100%;
 		height: 65px;
 		z-index: 0;
@@ -873,17 +857,6 @@ body {
 		&:hover {
 			background-color: #EA0E00;
 			cursor: pointer;
-		}
-		@media(max-width: $r_mob_600) {
-			margin-right: 20px;
-			max-width: 480px;
-		}
-		@media(max-width: $r_mob_500) {
-			max-width: 330px;
-		}
-
-		@media(max-width: $r_mob_400) {
-			max-width: 290px;
 		}
 	}
 
@@ -898,23 +871,14 @@ body {
 }
 
 .dropdown-container {
-	max-width: 540px;
-	width: 100%;
 	border-radius: 3px;
 	background: rgba($black, .05);
 	display: flex;
 	align-items: center;
 	min-height: 65px;
 	position: relative;
-	@media(max-width: $r_mob_600) {
-		max-width: 480px;
-	}
-	@media(max-width: $r_mob_500) {
-	 	max-width: 330px;
-	@media(max-width: $r_mob_400) {
-		max-width: 290px;
-	}
- }
+  }
+
  ul { 
 	 list-style-type: none; 
 	 padding: 0; 
@@ -938,14 +902,8 @@ body {
 		 bottom: 0;
 		 transform: rotate(90deg);
 		 @media(max-width: $r_mob_600) {
-			 left: 460px;
+			 right: -10px;
 		 }
-		 @media(max-width: $r_mob_500) {
-			left: 300px;
-		}
-		@media(max-width: $r_mob_400) {
-			left: 270px;
-		}
 	 }    
 	}
 	.content {
@@ -984,10 +942,7 @@ body {
 		 overflow: hidden;
 	  }
 	}
- }
  
-
-
 .sections {
 	background-color: $grey;
 }
@@ -1299,9 +1254,10 @@ body {
 		border-bottom: 1px solid $black;
 	}
 	&__cover  {
+		display: block;
 		padding: 20px 20px;
 		height: 315px;
-		width: 90%;
+		max-width: 560px;
 		border-bottom: 1px solid $black;
 		position: relative;
 		@media(max-width: $r_tab) {
@@ -1311,13 +1267,11 @@ body {
 	&__image {
 		position: absolute;
 		max-width: 560px;
-		width: 100%;
+		width: calc(100% - 10px);
 		height: 100%;
 		top: 0px;
 		left: 0px;
 		object-fit: contain;
-		max-width: 560px;
-		width: 100%;
 	}
 	&__content {
 		@media(max-width: $r_mob_600) {
