@@ -41,7 +41,6 @@ body {
 	margin: 0px auto;
 	padding: 0px 15px;
 	box-sizing: content-box;
-	overflow: hidden;
 	@media(max-width: $r_desk_1280) {
 		max-width: 980px;
 		width: 100%;
@@ -1160,11 +1159,6 @@ body {
 			padding: 80px 0px;
 		}
 	}
-
-	&__container {
-		position: relative;
-		z-index: 20;
-	}
 	
 	&__title {
 		color: $black;
@@ -1178,16 +1172,12 @@ body {
 		@media(max-width: $r_mob_500) {
 			font-size: 3.5rem;
 		}
-		&-block {
-			position: relative;
-			z-index: 90;
-		}
 	}
 	&__circle-big {
 		position: absolute;
 		top: 110px;
 		right: 36%;
-		z-index: 0;
+		z-index: -60;
 		@media(max-width: $r_tab) {
 			top: 110px;
 			right: 30%;
@@ -1199,21 +1189,22 @@ body {
 	}
 	
 	&__block {
-		margin-bottom: 180px;
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		@media(max-width: $r_tab) {
-			padding-bottom: 110px;
-		}
-		@media(max-width: $r_mob_600) {
-			grid-template-columns:  repeat(1, 1fr);
+		border-bottom: 1px solid $black;
+		padding: 60px 0px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media(max-width: $r_desk_1120) {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 40px;
 		}
 	}
 	&__content {
-		padding-top: 60px;
+		position: relative;
 		&-title {
 			display: block;
-			margin-bottom: 45px;
+			margin: 0px 0px 50px 0px;
 			color: $black;
 			font-size: 2.8rem;
 			font-weight: 700;
@@ -1227,6 +1218,7 @@ body {
 			}
 		}
 		&-description {
+			margin: 0px 0px 20px 0px;
 			color: rgba($black, .8);
 			font-size: 1.6rem;
 			font-weight: 400;
@@ -1242,7 +1234,7 @@ body {
 			font-size: 1.6rem;
 			font-weight: 700;
 			line-height: 1.5;
-			margin-top: 30px;
+			margin: 30px 0px 0px 0px;
 			@media(max-width: $r_tab) {
 				margin-top: 20px;
 				font-size: 1.5rem;
@@ -1250,45 +1242,43 @@ body {
 			}
 		}
 	}
-	&__content {
-		border-bottom: 1px solid $black;
-	}
 	&__cover  {
-		display: block;
-		padding: 20px 20px;
-		height: 315px;
-		max-width: 560px;
-		border-bottom: 1px solid $black;
 		position: relative;
-		@media(max-width: $r_tab) {
-			padding: 0px 10px;
-		}
-	}
-	&__image {
-		position: absolute;
+		display: block;
 		max-width: 560px;
-		width: calc(100% - 10px);
-		height: 100%;
-		top: 0px;
-		left: 0px;
-		object-fit: contain;
 	}
-	&__content {
-		@media(max-width: $r_mob_600) {
-			border-bottom: none;
+	
+	&__image {
+		max-width: 560px;
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		@media(max-width: $r_mob_400) {
+			max-width: 340px;
 		}
 	}
 }
+
 
 /* -- ДОПОЛНИТЕЛЬНЫЕ НАВЫКИ СЕКЦИЯ №4-- */
 .extraskills {
 	background-color: $grey;
 	position: relative;
 	z-index: 60;
-	padding: 0px 0px 140px 0px;
-	margin-top: -180px;
+	padding: 180px 0px 140px 0px;
 	@media(max-width: $r_tab) {
+		padding-top: 120px;
 		margin-bottom: 0px;
+	}
+	@media(max-width: $r_tab) {
+		padding-top: 90px;
+	}
+	@media(max-width: $r_mob_600) {
+		padding-top: 90px;
+	}
+	@media(max-width: $r_mob_500) {
+		padding-top: 80px;
+		padding-bottom: 60px;
 	}
 	
 	&__title-hidden {
@@ -1339,7 +1329,7 @@ body {
 			padding-top: 50px;
 		}
 		@media(max-width: $r_mob_500) {
-			padding-top: 30px;
+			padding-top: 0px;
 		}
 	}
 	&__item {
