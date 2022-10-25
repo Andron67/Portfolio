@@ -1247,18 +1247,34 @@ body {
 		}
 	}
 	&__cover  {
-		position: relative;
 		display: block;
+		position: relative;
 		max-width: 560px;
+		width: 100%;
+		height: 315px;
+		overflow: hidden;
+		@media(max-width: $r_mob_500) {
+			height: 250px;
+		}
+		@media(max-width: $r_mob_400) {
+			height: 200px;
+		}
+		@media(max-width: $r_mob_360) {
+			height: 150px;
+		}
 	}
 	
 	&__image {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		height: auto;
+		transform: translate(-50%, -50%);
+		object-fit: cover;
 		max-width: 560px;
 		width: 100%;
-		height: auto;
-		object-fit: cover;
-		@media(max-width: $r_mob_400) {
-			max-width: 340px;
+		@media(max-width: $r_mob_500) {
+			width: calc(100% - 20px)
 		}
 	}
 }
