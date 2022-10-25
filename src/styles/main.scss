@@ -34,14 +34,15 @@ body {
 	font-weight: 400;
 }
 
-
+.wrapper {
+	overflow: hidden;
+}
 .__container {
 	max-width: 1140px;
 	width: 100%;
 	margin: 0px auto;
 	padding: 0px 15px;
 	box-sizing: content-box;
-   overflow: hidden;
 	@media(max-width: $r_desk_1280) {
 		max-width: 980px;
 	}
@@ -1496,6 +1497,7 @@ body {
 			padding: 10px 10px 30px 10px;
 		}
 	}
+	/*
 	&__circle-midle {
 		position: absolute;
 		top: 15px;
@@ -1505,6 +1507,7 @@ body {
 		   left: -30px;
 		}
 	}
+	*/
 	&__circle-litlefirst {
 		position: absolute;
 		bottom: 40px;
@@ -1531,20 +1534,40 @@ body {
 		}
 	}
 	&__title {
+		display: block;
+		position: relative;
 		margin: 0px;
 		color: $black;
 		text-transform: uppercase;
 		font-size: 2.8rem;
 		line-height: 1.5;
 		font-weight: 700;
+		z-index: 20;
 		@media(max-width: $r_tab) {
 			margin-bottom: 20px;
 		}
 		@media(max-width: $r_mob_500) {
 			font-size: 2rem;
 		}
+		&::before {
+			background-color: $white;
+			border-radius: 100%;
+			width: 140px;
+			height: 140px;
+			content: '';
+			position: absolute;
+			top: -50px; 
+			left: -75px;
+			z-index: -30;
+			@media(max-width: $r_mob_500) {
+				top: -50px; 
+				left: -100px;
+			}
+		}
 	}
 	&__description {
+		position: relative;
+		z-index: 20;
 	   margin: 0px;
 		flex-basis: 560px;
 		color: rgba($black, .8);
