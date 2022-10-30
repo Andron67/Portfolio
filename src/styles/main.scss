@@ -34,20 +34,17 @@ body {
 	font-weight: 400;
 }
 
-.wrapper {
-	overflow: hidden;
-}
 .__container {
 	max-width: 1140px;
 	width: 100%;
 	margin: 0px auto;
 	padding: 0px 15px;
-	box-sizing: content-box;
+	box-sizing: border-box;
 	@media(max-width: $r_desk_1280) {
 		max-width: 980px;
 	}
 	@media(max-width: $r_tab_900) {
-		padding: 0px 5px;
+		padding: 0px 10px;
 	}
 }
 
@@ -56,7 +53,7 @@ body {
 	max-height: 120px;
 	&__fixed {
 		background-color: $grey;
-		width: 100%;
+		width: 100vw;
 		position: fixed;
 		top: 0px;	
 		z-index: 100;
@@ -140,6 +137,7 @@ body {
 	&_tel {
 		display: block;
 		padding: 5px 13px;
+		font-size: 1.4rem;
 		@media(max-width: $r_mob_360) {
 			padding: 5px 5px;
 		}
@@ -289,9 +287,9 @@ body {
 
 .social {
 	&__list {
+		margin: 0px;
 		padding-left: 5px;
 		display: flex;
-		justify-content: center;
 		gap: 50px;
 		height: 26px;
 		@media(max-width: $r_mob_500) {
@@ -499,7 +497,7 @@ body {
 		&:hover {
 			cursor: pointer;
 		}
-
+		/* Нижнее подчёркивание под "обсудить проект"*/
 		&::after {
 			content: '';
 			width: 170px;
@@ -520,9 +518,8 @@ body {
 
 	&__button {
 		color: $black;
-		display: block;
-		padding-left: 0px;
-		padding-right: 0px;
+		display: flex;
+		align-items: center;
 		text-decoration: none;
 		font-size: 1.6rem;
 		font-weight: 700;
@@ -537,15 +534,9 @@ body {
 			background: url('../icons/arrow.svg');
 			width: 16px;
 			height: 12px;
-			position: absolute;
-			top: 5px;
-			right: 0px;
-			@media(max-width: $r_mob_500) {
-				top: 2px;
-				right: 5px;
-			}
+			margin-left: 10px;
 			@media(max-width: $r_mob_360) {
-				top: 0px;
+				margin-left: 3px;
 			}
 		}
 	}
@@ -1385,12 +1376,12 @@ body {
 /* -- МОИ ИНСТРУМЕНТЫ СЕКЦИЯ №5-- */
 .tool {
 	background-color: $grey;
-	padding: 0px 5px 120px 5px;
+	padding-bottom: 120px;
 	@media(max-width: $r_tab) {
-		padding: 0px 5px 100px 5px;
+		padding-bottom: 100px;
 	}
 	@media(max-width: $r_mob_500) {
-		padding: 0px 10px 90px 0px;
+		padding-bottom: 90px;
 	}
 	&__title-hidden {
 		margin-top: -17px;
@@ -1718,7 +1709,7 @@ body {
 	&__figure {
 		&-block{
 			position: relative;
-			z-index: -10;
+			z-index: 20;
 		}
 		position: absolute;
 		top: 0px;
@@ -1735,56 +1726,56 @@ body {
 	}
 
 	&__grid {
+		position: relative;
+		z-index: 40;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		@media(max-width: $r_tab_900) {
 			padding: 0px 10px;
-			grid-template-columns: repeat(1, 1fr);
-			grid-template-rows: 140px 240px 70px 1fr;
-		}
-		@media(max-width: $r_mob_500) {
-			grid-template-rows: 80px 140px 30px 1fr;
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr;
+			grid-template-areas:
+			"title"
+			"description"
+			"form"
+			"social";
 		}
 	}
 	
 	&__item {
 		border-bottom: 1px solid $black;
-		padding-top: 0px;
-	}
-
-	&__item:nth-child(1) {
-		@media(max-width: $r_tab_900) {
-			border-bottom: none;
-		}
-	}
-
-	&__item:nth-child(3) {
-		border-bottom: none;
-		@media(max-width: $r_tab_900) {
-			order: 4;
+		padding: 0px;
+		&:nth-child(3) {
 			display: flex;
-			justify-content: center;
-			width: 100%;
-			padding-bottom: 20px;
+			align-items: flex-end;
+			border-bottom: none;
+			@media(max-width: $r_tab_900) {
+				justify-content: center;
+			}
 		}
-	}
-
-	&__item:nth-child(4) {
-		border: none;
-		max-width: 560px;
-		width: 100%;
-		margin: 10px auto;
-		padding-top: 50px;
+		&:nth-child(4) {
+			padding-top: 60px;
+			border-bottom: none;
+			@media(max-width: $r_mob_600) {
+				padding-top: 40px;
+			}
+		}
 		@media(max-width: $r_tab_900) {
-			order: 3;
-		}
-	}
-
-	&__social {
-		margin-left: -40px;
-		padding-top: 420px;
-		@media(max-width: $r_tab) {
-			padding-top: 430px;
+			&:nth-child(1) {
+				grid-area: title;
+				border-bottom: none;
+			}
+			&:nth-child(2) {
+				grid-area: description;
+			}
+			&:nth-child(3) {
+				border-bottom: none;
+				grid-area: social;
+			}
+			&:nth-child(4) {
+				border-bottom: none;
+				grid-area: form;
+			}
 		}
 	}
 
@@ -1822,6 +1813,11 @@ body {
 		@media(max-width: $r_mob_500) {
 			font-size: 2.0rem;
 			max-width: 280px;
+		}
+	}
+	&__social {
+		@media(max-width: $r_tab_900) {
+			padding-top: 60px;
 		}
 	}
 }
