@@ -809,6 +809,9 @@ body {
 			width: 170px;
 			font-size: 2rem;
 		}
+		@media(max-width: $r_mob_400) {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__subtitle {
