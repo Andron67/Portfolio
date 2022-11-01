@@ -192,13 +192,16 @@ body {
 	background-color: $grey;
 	max-width: 360px;
 	width: 100%;
-	padding: 0px 10px;
 	position: absolute;
 	z-index: 100;
 	top: -900px;
 	right: 5px;
 	box-sizing: border-box;
 	transition: .3s;
+	&__content {
+		width: calc(100% - 20px);
+		margin: 0px auto;
+	}
 	&__header {
 		height: 80px;
 		border-bottom: 1px solid rgba($black, .2);
@@ -214,6 +217,7 @@ body {
 	}
 
 	&__list {
+		margin: 0px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -225,8 +229,6 @@ body {
 		border-bottom: 1px solid rgba($black, .2);
 		margin: 0px;
 		display: block;
-		max-width: 360px;
-		width: 100%;
 		list-style: none;
 		padding: 20px 0px;
 		text-align: center;
@@ -932,8 +934,9 @@ body {
 		 @media(max-width: $r_mob_600) {
 			 right: -10px;
 		 }
-	 }    
+	 }  
 	}
+
 	.content {
 	  height: 0;
 	  max-height: 0px;    
