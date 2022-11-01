@@ -233,13 +233,6 @@ body {
 		padding: 20px 0px;
 		text-align: center;
 		width: 100%;
-		@media(max-width: $r_mob_600) {
-			padding: 10px 0px;
-			max-width: 320px;
-		}
-		@media(max-width: $r_mob_500) {
-			padding: 5px 0px;
-		}
 	}
 
 	&__link {
