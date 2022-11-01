@@ -139,6 +139,7 @@ body {
 .connect {
 	display: flex;
 	&_tel {
+		margin: 0px;
 		display: block;
 		padding: 5px 13px;
 		font-size: 1.4rem;
@@ -148,6 +149,7 @@ body {
 	}
 
 	&_mail {
+		margin: 0px;
 		border-left: 1px solid rgba($black, .2);
 		display: block;
 		padding: 5px 0px 5px 13px;
@@ -199,7 +201,7 @@ body {
 	transition: .3s;
 	&__header {
 		height: 80px;
-		border-bottom: 1px solid $black;
+		border-bottom: 1px solid rgba($black, .2);
 		@media(max-width: $r_mob_600) {
 			height: 60px;
 		}
@@ -220,7 +222,8 @@ body {
 	}
 
 	&__item {
-		border-bottom: 1px solid $black;
+		border-bottom: 1px solid rgba($black, .2);
+		margin: 0px;
 		display: block;
 		max-width: 360px;
 		width: 100%;
@@ -1635,12 +1638,12 @@ body {
 		}
 	
 		&-list {
-			list-style-type: disc;
 			margin: 0px;
 			padding-left: 30px;
 			flex: 1 1 auto;
 		}
 		&-link {
+			list-style-type: disc;
 			margin: 0px 0px 8px -10px;
 			color: rgba($black, .8);
 			font-size: 1.6rem;
