@@ -141,10 +141,10 @@ body {
 	&_tel {
 		margin: 0px;
 		display: block;
-		padding: 5px 13px;
+		padding: 5px 13px 5px 0px;
 		font-size: 1.4rem;
 		@media(max-width: $r_mob_360) {
-			padding: 5px 5px;
+			padding: 5px 5px 5px 0px;
 		}
 	}
 
