@@ -190,7 +190,6 @@ body {
 
 .modal {
 	background-color: $grey;
-	max-width: 360px;
 	width: 100%;
 	position: absolute;
 	z-index: 100;
@@ -199,7 +198,6 @@ body {
 	box-sizing: border-box;
 	transition: .3s;
 	&__content {
-		width: calc(100% - 20px);
 		margin: 0px auto;
 	}
 	&__header {
